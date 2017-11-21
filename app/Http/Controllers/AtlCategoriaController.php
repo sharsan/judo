@@ -3,82 +3,76 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\AtlCategoria;
+
+use App\Atleta;
+use App\Categoria;
 
 class AtlCategoriaController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
+  public function index()
+  {
+     $atlcategoria = AtlCategoria::all()->toArray();
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+     $atleta = Atleta::all();  
+     $categoria = Categoria::all();  
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+     return view('atlcategoria.index', compact('atlcategoria','atleta','categoria'));
+ } 
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+ public function create()
+ {
+     $atlcategoria = AtlCategoria::all();  
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+     $atleta = Atleta::all();   
+     $categoria = Categoria::all();  
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+     return view("atlcategoria.create", compact('atlcategoria','atleta','categoria'));   
+ }   
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+ public function edit($id)
+ {
+     $atlcategoria = AtlCategoria::find($id);
+
+     $atleta = Atleta::all();  
+     $categoria = Categoria::all();  
+
+     return view('atlcategoria.edit', compact('atlcategoria','id','atleta','categoria')); 
+ } 
+
+ public function update(Request $request, $id)
+ {          
+     request()->validate(  
+        [   
+          'atleta' => 'required',
+          'categoria' => 'required' 
+      ]); 
+     AtlCategoria::find($id)->update($request->all());
+     return redirect()->route('atlcategoria.index')
+
+     ->with('success','Atribuição de cinto actualizado com sucesso');   
+ }
+ public function store(Request $request)
+ {     
+     $this->validate(request(), [ 
+        'atleta' => 'required',
+        'categoria' => 'required' 
+    ]);
+     $atlcategoria = new AtlCategoria([
+        'atleta' => $request->get('atleta'), 
+        'categoria' => $request->get('categoria'), 
+               //campos de exigencia de valores
+    ]);
+     AtlCategoria::create($request->all());
+     return back()->with('success', 'Cinturão atribuído ao atleta com sucesso'); 
+ }
+
+
+ public function destroy($id)
+ {
+     $atlcategoria = AtlCategoria::find($id);
+     $atlcategoria->delete();
+
+     return redirect('/atlcinto');
+ }  
 }

@@ -8,16 +8,7 @@
 
   <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
-  <table class="table table-striped" id="myTable">   
-    
-    <div class="col-lg-4">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Insira a palavra a pesquisar..." aria-label="pesquisar">
-        <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">Buscar!</button>
-        </span>
-      </div>
-    </div>
+  <table class="table table-striped" id="myTable">    
     
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
@@ -46,7 +37,7 @@
             
             <td><a href="{{action('AtlEscalaoController@edit', $post['id'])}}" class="btn btn-warning">Editar</a></td>
             <td> 
-              
+
               <form action="{{action('AtlEscalaoController@destroy', $post['id'])}}" method="post">
                 {{csrf_field()}}
                 <input name="_method" type="hidden" value="DELETE">
@@ -56,4 +47,31 @@
           </div>  <!--  este div inseri pra separa o Search com o restante -->
 
         </tr>
-     
+        @endforeach
+      </tbody>
+    </table>
+  </div>
+
+
+  <script type="text/javascript">
+
+   function filtrar() {
+
+    var input = document.getElementById("txtPesk");
+    var tabela = document.getElementById("myTable");
+    var linhas = tabela.getElementsByTagName("tr");
+
+    for (var indice = 1; indice < linhas.length; indice++) {
+      var coluna = linhas[indice].getElementsByTagName("td")[1];
+      if (coluna) {
+        if (coluna.innerHTML.toLowerCase().indexOf(input.value.toLowerCase()) > -1) {
+          linhas[indice].style.display = "";
+        } else {
+          linhas[indice].style.display = "none";
+        }
+      }
+    }
+  }
+
+</script>
+@endsection

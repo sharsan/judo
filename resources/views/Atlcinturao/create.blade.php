@@ -4,7 +4,7 @@
 <div class="container"> 
  <link rel="stylesheet" href="{{asset('css/app.css')}}">
  <h2>Atribuir cinturão a atleta</h2><br>
- <a href="{{URL::to('atlcinto')}}" title=""><h4>Cinturões</h4></a>
+ <a href="{{URL::to('atlcinto')}}" title=""><h4>Cinturões - Atletas</h4></a>
  
  @if ($errors->any())
  <div class="alert alert-danger">
@@ -31,10 +31,10 @@
 
       <!-- Nome --> 
       <div class="col-md-10"> <br> 
-        <label for="atleta">Atleta :
-          <select id="atleta" name="atleta">
+        <label for="atleta_id">Atleta :
+          <select id="atleta_id" name="atleta_id">
 
-            @foreach($atleta as $atl)
+            @foreach($atleta_id as $atl)
             <option value="{{$atl->nome}}">{{$atl->nome}} </option>
             @endforeach
           </select>
@@ -45,17 +45,17 @@
       <div class="col-md-12"> 
        <label for="data">Data da graduação :
          <meta charset="utf-8"> 
-         <meta name="data" content="referrer"> 
-         <input type="date" placeholder="Ex: 2016-08-29 10:10:40">   
+         {{-- <meta name="data" content="referrer">  --}}
+         <input type="date" name="data" placeholder placeholder="Ex: 2016-08-29 10:10:40">   
        </label> 
-     </div>  
+     </div>   
      <!-- Cinturão --> 
 
      <div class="col-md-10"> <br> 
-      <label for="cinturao">Cinturão :
-        <select id="cinturao" name="cinturao">
+      <label for="cinturao_id">Cinturão :
+        <select id="cinturao_id" name="cinturao_id">
 
-          @foreach($cinturao as $cnt)
+          @foreach($cinturao_id as $cnt)
           <option value="{{$cnt->nome}}">{{$cnt->nome}} </option>
           @endforeach
         </select>

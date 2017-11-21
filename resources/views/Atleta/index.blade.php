@@ -37,6 +37,8 @@
     {{--     <td>{{$post['created_at']}}</td>
     <td>{{$post['updated_at']}}</td> --}}
 
+    <td><a href="{{action('AtletaController@show', $post['id'])}}" class="btn btn-primary">Detalhes</a></td>
+
     <td><a href="{{action('AtletaController@edit', $post['id'])}}" class="btn btn-success">Editar</a></td>
     <td>
       <form action="{{action('AtletaController@destroy', $post['id'])}}" method="post">

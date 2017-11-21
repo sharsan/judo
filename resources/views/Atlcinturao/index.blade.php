@@ -14,8 +14,8 @@
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
 
-        <a href="{{URL::to('atleta')}}" title=""><h4>Atletas</h4></a>
-        <a href="{{URL::to('cinturao')}}" title=""><h4>Cintos</h4></a>
+        <a href="{{URL::to('atleta_id')}}" title=""><h4>Atletas</h4></a>
+        <a href="{{URL::to('cinturao_id')}}" title=""><h4>Cintos</h4></a>
 
         <div class="form-group col-md-4"> <br>
           <a href="{{URL::to('atlcinto/create')}}" title=""><h4>Atribuir cinturão ao atleta</h4></a> 
@@ -23,10 +23,9 @@
 
         <thead>
           <tr>
-            <th>ID</th>
+            {{-- <th>ID</th> --}}
             <th>Atleta</th>
-            <th>Cinto</th> 
-            <th>Data</th> 
+            <th>Cinto</th>  
             <th>Graduado em</th> 
     {{--         <th>Criado em</th>
       <th>Actualizado em</th>  --}} 
@@ -35,9 +34,9 @@
   <tbody>
     @foreach($atlcinturao as $post)
     <tr>
-      <td>{{$post['id']}}</td>
-      <td>{{$post['atleta']}}</td> 
-      <td>{{$post['cinturao']}}</td> 
+      {{-- <td>{{$post['id']}}</td> --}}
+      <td>{{$post['atleta_id']}}</td> 
+      <td>{{$post['cinturao_id']}}</td> 
       <td>{{$post['data']}}</td> 
            {{--  <td>{{$post['created_at']}}</td>
            <td>{{$post['updated_at']}}</td>  --}}

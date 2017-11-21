@@ -6,9 +6,13 @@
 
 
  <h3><th>Tatami 1</th></h3>
- <table class="table table-striped">    
 
-   <thead>
+ <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+
+ <table class="table table-striped" id="myTable">  
+  <br>  
+
+  <thead>
     <tr>
       <th>ID</th> 
       <th>Torneio</th> 
@@ -95,4 +99,25 @@
 </tbody>
 </table>
 </div>
+<script type="text/javascript">
+
+ function filtrar() {
+
+  var input = document.getElementById("txtPesk");
+  var tabela = document.getElementById("myTable");
+  var linhas = tabela.getElementsByTagName("tr");
+
+  for (var indice = 1; indice < linhas.length; indice++) {
+    var coluna = linhas[indice].getElementsByTagName("td")[1];
+    if (coluna) {
+      if (coluna.innerHTML.toLowerCase().indexOf(input.value.toLowerCase()) > -1) {
+        linhas[indice].style.display = "";
+      } else {
+        linhas[indice].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
 @endsection

@@ -5,7 +5,12 @@
  <h3><center><th>Qualificações</th></center> </h3>
 
  <a href="{{URL::to('grupo')}}" title=""><h4> Fase de grupos</h4></a>
- <table class="table table-striped">  
+
+ <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+
+ <table class="table table-striped" id="myTable">  
+  <br> 
+
   <thead>   <a href="{{URL::to('finalista/create')}}" title=""><h4>+ adicionar finalistas</h4></a>
 
 
@@ -50,4 +55,25 @@
   </tbody>
 </table>
 </div>
-@endsection
+
+<script type="text/javascript">
+
+ function filtrar() {
+
+  var input = document.getElementById("txtPesk");
+  var tabela = document.getElementById("myTable");
+  var linhas = tabela.getElementsByTagName("tr");
+
+  for (var indice = 1; indice < linhas.length; indice++) {
+    var coluna = linhas[indice].getElementsByTagName("td")[1];
+    if (coluna) {
+      if (coluna.innerHTML.toLowerCase().indexOf(input.value.toLowerCase()) > -1) {
+        linhas[indice].style.display = "";
+      } else {
+        linhas[indice].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>

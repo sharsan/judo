@@ -13,38 +13,38 @@ class AtlCinturaoController extends Controller
   {
    $atlcinturao = AtlCinturao::all()->toArray();
 
-   $atleta = Atleta::all();  
-   $cinturao = Cinturao::all();  
+   $atleta_id = Atleta::all();  
+   $cinturao_id = Cinturao::all();  
 
-   return view('atlcinturao.index', compact('atlcinturao','atleta','cinturao'));
+   return view('atlcinturao.index', compact('atlcinturao','atleta_id','cinturao_id'));
  } 
 
  public function create()
  {
    $atlcinturao = AtlCinturao::all();  
 
-   $atleta = Atleta::all();   
-   $cinturao = Cinturao::all();  
+   $atleta_id = Atleta::all();   
+   $cinturao_id = Cinturao::all();  
 
-   return view("atlcinturao.create", compact('atlcinturao','atleta','cinturao'));   
+   return view("atlcinturao.create", compact('atlcinturao','atleta_id','cinturao_id'));   
  }   
 
  public function edit($id)
  {
    $atlcinturao = AtlCinturao::find($id);
 
-   $atleta = Atleta::all();  
-   $cinturao = Cinturao::all();  
+   $atleta_id = Atleta::all();  
+   $cinturao_id = Cinturao::all();  
 
-   return view('atlcinturao.edit', compact('atlcinturao','id','atleta','cinturao')); 
+   return view('atlcinturao.edit', compact('atlcinturao','id','atleta_id','cinturao_id')); 
  } 
 
  public function update(Request $request, $id)
  {          
    request()->validate(  
     [   
-      'atleta' => 'required',
-      'cinturao' => 'required' 
+      'atleta_id' => 'required',
+      'cinturao_id' => 'required' 
     ]); 
    AtlCinturao::find($id)->update($request->all());
    return redirect()->route('atlcinturao.index')
@@ -54,12 +54,12 @@ class AtlCinturaoController extends Controller
  public function store(Request $request)
  {     
    $this->validate(request(), [ 
-    'atleta' => 'required',
-    'cinturao' => 'required' 
+    'atleta_id' => 'required',
+    'cinturao_id' => 'required' 
   ]);
    $atlcinturao = new AtlCinturao([
-    'atleta' => $request->get('atleta'), 
-    'cinturao' => $request->get('cinturao'), 
+    'atleta_id' => $request->get('atleta_id'), 
+    'cinturao_id' => $request->get('cinturao_id'), 
                //campos de exigencia de valores
   ]);
    AtlCinturao::create($request->all());

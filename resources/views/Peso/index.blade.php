@@ -3,21 +3,15 @@
 <title>Pesos </title>
 
 <div class="container"> 
-  <h3><center><th>Registros dos pesos dos atletas</th></center> </h3>
-  <table class="table table-striped">  
+  <h3><center><th>Registros dos pesos dos atletas</th></center> </h3> 
+
+  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+  <br>
+  <table class="table table-striped" id="myTable">    
+    
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <!-- Navbar content -->
-    </nav> 
-
-    <div class="col-lg-4">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="Insira a palavra a pesquisar..." aria-label="pesquisar">
-        <span class="input-group-btn">
-          <button class="btn btn-secondary" type="button">Buscar!</button>
-        </span>
-      </div>
-    </div>
-    
+    </nav>   
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
 
@@ -64,4 +58,27 @@
 </tbody>
 </table>
 </div>
+
+
+<script type="text/javascript">
+
+ function filtrar() {
+
+  var input = document.getElementById("txtPesk");
+  var tabela = document.getElementById("myTable");
+  var linhas = tabela.getElementsByTagName("tr");
+
+  for (var indice = 1; indice < linhas.length; indice++) {
+    var coluna = linhas[indice].getElementsByTagName("td")[1];
+    if (coluna) {
+      if (coluna.innerHTML.toLowerCase().indexOf(input.value.toLowerCase()) > -1) {
+        linhas[indice].style.display = "";
+      } else {
+        linhas[indice].style.display = "none";
+      }
+    }
+  }
+}
+
+</script>
 @endsection

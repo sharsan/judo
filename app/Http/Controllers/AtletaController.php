@@ -62,11 +62,20 @@ class AtletaController extends Controller
         // return redirect('/atleta');
  }  
 
+//  public function show($id) 
+//  { 
+//   $atleta = Atleta::find($id);
+
+//   return view('atleta.show',compact('atleta')); 
+// } 
+
+
+
  public function show($id) 
  { 
   $atleta = Atleta::find($id);
 
-  return view('atleta.show',compact('atleta')); 
+  return view('atleta.show', ['atleta' =>$atleta]); 
 } 
 
 

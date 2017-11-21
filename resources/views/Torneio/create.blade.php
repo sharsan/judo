@@ -37,19 +37,17 @@
 
     <div class="col-md-12"> 
      <label for="datai">Data inicial :
-       <meta charset="utf-8"> 
-       <meta name="datai" content="referrer"> 
-       <input type="date" placeholder="Ex: 2017-10-29 08:10:43">   
+       <meta charset="utf-8">  
+       <input type="date" name="datai" placeholder="Ex: 2017-10-29 08:10:43">   
      </label> 
    </div>    
-
+   
    <!-- Data do termino -->
 
    <div class="col-md-12"> 
      <label for="datat">Data do termino :
       <meta charset="utf-8"> 
-      <meta name="datat" content="width=device-width"> 
-      <input type="date" placeholder="Ex: 2017-11-12 12:10:00"> 
+      <input type="date" name="datat" placeholder="Ex: 2017-11-12 12:10:00"> 
     </label> 
   </div>
 </div>            

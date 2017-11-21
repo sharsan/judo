@@ -10,5 +10,5 @@ class AtlEscalao extends Model
 
 	protected $guarded = ['id', 'created_at', 'update_at'];  
 	
-	protected $table = 'atl_escaloes'; 
+	protected $table = 'atlescaloes'; 
 }

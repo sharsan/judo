@@ -8,7 +8,7 @@ class CreateAtlPesosTable extends Migration
 { 
     public function up()
     {
-        Schema::create('atl_pesos', function (Blueprint $table) {
+        Schema::create('atlpesos', function (Blueprint $table) {
             $table->increments('id');
             $table->string('peso', 30); 
             $table->string('atleta', 40); 
