@@ -31,68 +31,29 @@
 
      <div class="row">
       <div class="form-group col-md-6">  
-        
-        <!-- Apelido -->
-        <div class="col-md-6">
-          <label for="apelido"> Apelido:</label>
-          <input type="text" class="form-control" name="apelido" placeholder="Ex: Conde"></input> </div>
-          
-          <!-- Nome -->
-          <div class="col-md-12">
-            <label for="nome"> Nome :</label> 
-            <input type="text" class="form-control" name="nome" placeholder="Ex: Chiquinho"></input><br></div>
-            
-          </div>
-          <div class="form-group col-md-10">    
-           <!-- Fotografia   -->
-           <div class="col-md-3"> 
-             <label for="fotografia">Fotografia 
-               <input type="file" class="form-control-file" id="fotografia">
-             </label> 
-           </div>
-           <!-- Sexo --> 
-           <div class="col-md-3">  <br> 
-            <label for="sexo">Sexo :
-              <input type="radio" class="form-check-input" name="sexo" value="M" checked></input> 
-              M
-              <input class="form-check-input" type="radio" name="sexo" id="F" value="F"></input> 
-              F
-            </label> 
-          </div>
-          
-          <!-- Idade  -->
-          
-          <div class="col-md-2"> 
-           <label for="idade"> Idade:
-             <input type="number" class="form-control" name="idade"></input> 
-           </label>
-         </div>  
-       </div>
-       <div class="form-group col-md-10">    
-         <!-- telefone --> 
-         <div class="col-md-3">                
-           <label for="telefone"> telefone:</label>
-           <input type="int" class="form-control" name="telefone" placeholder=" Ex: 84 123 91 08"></input></div>  
-           
-           <!-- email -->
-           <div class="col-md-6">     
-             <label for="email"> email: </label> 
-             <input type="text" class="form-control" name="email" placeholder="Ex: chiquinhoconde@mocambola.co.mz "></input><br>
-           </div>  
-           <!-- Clube --> 
-           
-           <div class="col-md-6">     
-             <label for="clube"> Clube:  
-              <select id="clube" name="clube">
-                
-                @foreach($clube as $clb)
-                <option value="{{$clb->nome}}">{{$clb->nome}} </option>
-                @endforeach
-              </select>
-            </label> 
-            <label> <a href="{{URL::to('clube')}}" title=""><h5>+ Outro clube</h5></a>  </label>      
-          </div> 
-        </div> 
+         
+          <!-- Nome --> 
+      <div class="col-md-10"> <br> 
+        <label for="atleta_id">Atleta :
+          <select id="atleta_id" name="atleta_id">
+
+            @foreach($atleta_id as $atl)
+            <option value="{{$atl->nome}}">{{$atl->nome}} </option>
+            @endforeach
+          </select>
+        </label>    
+      </div> 
+          <!-- Nome --> 
+      <div class="col-md-10"> <br> 
+        <label for="treinador_id">Atleta :
+          <select id="treinador_id" name="treinador_id">
+
+            @foreach($treinador_id as $atl)
+            <option value="{{$atl->nome}}">{{$atl->nome}} </option>
+            @endforeach
+          </select>
+        </label>    
+      </div> 
 
         <!-- Outros detalhes --> 
 

@@ -10,10 +10,11 @@ class CreateEsttsTable extends Migration
     public function up()
     {
         Schema::create('estts', function (Blueprint $table) {
-           
+         
             $table->increments('id');
             $table->string('estado', 45); 
-            $table->string('torneio', 45); 
+            $table->string('torneio', 45);
+            $table->string('descricao', 100)->nullable(); 
             $table->timestamps();
         });
     }

@@ -25,9 +25,9 @@
 
         <thead> 
           <tr>
-            <th>ID</th>
-            <th>Clube</th>
+            {{-- <th>ID</th> --}}
             <th>Treinador</th> 
+            <th>Clube</th>
          {{--    <th>Criado em</th>
           <th>Actualizado em</th>   --}}
         </tr>
@@ -35,9 +35,9 @@
       <tbody>
         @foreach($couchclube as $post)
         <tr>
-          <td>{{$post['id']}}</td>
-          <td>{{$post['clube']}}</td> 
+          {{-- <td>{{$post['id']}}</td> --}}
           <td>{{$post['treinador']}}</td> 
+          <td>{{$post['clube']}}</td> 
       {{--       <td>{{$post['created_at']}}</td>
       <td>{{$post['updated_at']}}</td>  --}}
 

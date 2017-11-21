@@ -27,7 +27,7 @@
 
         <thead>
           <tr>
-            <th>ID</th>
+            {{-- <th>ID</th> --}}
             <th>Nome</th> 
             <th>Criado em</th>
             <th>Actualizado em</th>  
@@ -36,7 +36,7 @@
         <tbody>
           @foreach($categoria as $post)
           <tr>
-            <td>{{$post['id']}}</td>
+            {{-- <td>{{$post['id']}}</td> --}}
             <td>{{$post['nome']}}</td> 
             <td>{{$post['created_at']}}</td>
             <td>{{$post['updated_at']}}</td> 

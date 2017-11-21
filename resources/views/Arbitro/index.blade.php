@@ -12,7 +12,7 @@
     <a href="{{URL::to('arbitro/create')}}" title=""><h4>Adicionar arbitro</h4></a>
     <thead>
       <tr>
-        <th>ID</th>
+        {{-- <th>ID</th> --}}
         <th>Nome</th> 
         <th>Apelido</th> 
         <th>Sexo</th>
@@ -26,7 +26,7 @@
 <tbody>
   @foreach($arbitro as $post)
   <tr>
-    <td>{{$post['id']}}</td>
+    {{-- <td>{{$post['id']}}</td> --}}
     <td>{{$post['nome']}}</td>
     <td>{{$post['apelido']}}</td> 
     <td>{{$post['sexo']}}</td>

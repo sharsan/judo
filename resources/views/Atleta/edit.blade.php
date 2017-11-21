@@ -35,16 +35,17 @@
         <!-- Apelido -->
         <div class="col-md-6">
           <label for="apelido"> Apelido:</label>
-          <input type="text" class="form-control" name="apelido" placeholder="Ex: Tembe" value="{{$atleta->apelido}}"></input></div>
+          <input type="text" class="form-control" name="apelido" placeholder="Ex: Tembe" value="{{$atleta->apelido}}"></input>
+        </div>
+        
+        <!-- Nome -->
+        <div class="col-md-12">
+          <label for="nome"> Nome :</label>
+          <input type="text" class="form-control" name="nome" placeholder="Ex: Marcia" value="{{$atleta->nome}}"></input></div>
           
-          <!-- Nome -->
-          <div class="col-md-12">
-            <label for="nome"> Nome :</label>
-            <input type="text" class="form-control" name="nome" placeholder="Ex: Marcia" value="{{$atleta->nome}}"></input></div>
-            
-          </div>
-          <div class="form-group col-md-10">    
-           <!-- Fotografia   -->
+        </div>
+        <div class="form-group col-md-10">    
+         <!-- Fotografia   -->
        {{--     <div class="col-md-3"> 
              <label for="fotografia">Fotografia 
                <input type="file" class="form-control-file" id="fotografia">

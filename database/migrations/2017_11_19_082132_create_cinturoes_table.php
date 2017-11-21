@@ -11,7 +11,7 @@ class CreateCinturoesTable extends Migration
         Schema::create('cinturoes', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome', 45); 
-            $table->string('descricao', 45)->nullable(); 
+            $table->string('descricao', 150)->nullable(); 
             $table->timestamps();
         });
     }

@@ -11,12 +11,12 @@ class CreateArbitrosTable extends Migration
         {
             $table->increments('id');
             $table->string('nome', 45);
-            $table->string('apelido', 15); 
+            $table->string('apelido', 15)->nullable();  
             $table->string('sexo', 2);
-            $table->integer('idade');           
-            $table->integer('telefone'); 
-            $table->string('email', 40);     
-            $table->string('descricao', 100);   
+            $table->integer('ano')->nullable();            
+            $table->integer('telefone')->nullable();  
+            $table->string('email', 40)->nullable();     
+            $table->string('descricao', 150)->nullable();    
             $table->timestamps();
         });
     }

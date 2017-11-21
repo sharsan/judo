@@ -11,7 +11,8 @@ class CreateEscalaosTable extends Migration
         Schema::create('escalaos', function (Blueprint $table) 
         {
             $table->increments('id');
-            $table->string('nome', 20);  
+            $table->string('nome', 20); 
+            $table->string('descricao', 100)->nullable(); 
             $table->timestamps();
         });
     }

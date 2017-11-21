@@ -14,7 +14,7 @@
 
   <thead>
     <tr>
-      <th>ID</th> 
+      {{-- <th>ID</th>  --}}
       <th>Torneio</th> 
       <th>Vencedor</th>   
       <th>Escalão</th>  
@@ -24,7 +24,7 @@
 
   @foreach($tatami12 as $post)
   <tr>
-    <td>{{$post['id']}}</td> 
+    {{-- <td>{{$post['id']}}</td>  --}}
     <td>{{$post['torneio']}}</td>
     <td>{{$post['vencedor12']}}</td>
     <td>{{$post['escalao']}}</td> 

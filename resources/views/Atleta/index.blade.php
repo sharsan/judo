@@ -13,7 +13,7 @@
     <a href="{{URL::to('atlcinto')}}" title=""><h4>Ver cinturões</h4></a> 
     <thead>
       <tr>
-        <th>ID</th>
+        {{-- <th>ID</th> --}}
         <th>Nome</th> 
         <th>Apelido</th> 
         <th>Sexo</th>
@@ -27,7 +27,7 @@
 <tbody>
   @foreach($atleta as $post)
   <tr>
-    <td>{{$post['id']}}</td>
+    {{-- <td>{{$post['id']}}</td> --}}
     <td>{{$post['nome']}}</td>
     <td>{{$post['apelido']}}</td> 
     <td>{{$post['sexo']}}</td>

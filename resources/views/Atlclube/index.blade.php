@@ -20,7 +20,7 @@
         
         <thead> 
           <tr>
-            <th>ID</th>
+            {{-- <th>ID</th> --}}
             <th>Clube</th> 
             <th>Atleta</th> 
        {{--      <th>Criado em</th>
@@ -30,7 +30,7 @@
     <tbody>
       @foreach($atlclube as $post)
       <tr>
-        <td>{{$post['id']}}</td>
+        {{-- <td>{{$post['id']}}</td> --}}
         <td>{{$post['clube']}}</td> 
         <td>{{$post['atleta']}}</td> 
          {{--    <td>{{$post['created_at']}}</td>

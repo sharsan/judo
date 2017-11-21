@@ -42,7 +42,7 @@ public function store(Request $request)
  else{  
 
    $this->validate(request(), [
-     'nome' => 'required|unique:treinadors|min:3,max:40',
+     'nome' => 'required|unique:treinadores|min:3,max:40',
    ]);
  }
 
@@ -52,8 +52,8 @@ public function store(Request $request)
   'sexo' => $request->get('sexo'), 
   'ano' => $request->get('ano'), 
   'telefone' => $request->get('telefone'),
-  'email' => $request->get('email'), 
-  'descricao' => $request->get('descricao')
+  'email' => $request->get('email'),
+  // 'descricao' => $request->get('descricao')
 
 ]);
  Treinador::create($request->all());
@@ -65,7 +65,7 @@ public function update(Request $request, $id)
 {     
  request()->validate(  
   [   
-   'nome' => 'required|unique:treinadors|min:3,max:40',
+   'nome' => 'required|unique:treinadores|min:3,max:40',
  ]); 
  Treinador::find($id)->update($request->all());
  return redirect()->route('treinador.index')

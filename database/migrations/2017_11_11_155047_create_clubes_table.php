@@ -12,6 +12,7 @@ class CreateClubesTable extends Migration
         {
             $table->increments('id');
             $table->string('nome', 45); 
+            $table->string('descricao', 150)->nullable();
             $table->timestamps(); 
         });
     }

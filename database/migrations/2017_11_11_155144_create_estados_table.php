@@ -11,6 +11,7 @@ class CreateEstadosTable extends Migration
         {
             $table->increments('id');
             $table->string('nome', 20);  
+            $table->string('descricao', 100)->nullable();
             $table->timestamps(); 
         });
     }

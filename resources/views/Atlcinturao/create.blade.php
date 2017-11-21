@@ -40,6 +40,19 @@
           </select>
         </label>    
       </div> 
+      <!-- Cinturão --> 
+
+      <div class="col-md-10"> <br> 
+        <label for="cinturao_id">Cinturão :
+          <select id="cinturao_id" name="cinturao_id">
+
+            @foreach($cinturao_id as $cnt)
+            <option value="{{$cnt->nome}}">{{$cnt->nome}} </option>
+            @endforeach
+          </select>
+        </label>    
+      </div> 
+      
       <!-- Data da graduação -->  
 
       <div class="col-md-12"> 
@@ -49,35 +62,23 @@
          <input type="date" name="data" placeholder placeholder="Ex: 2016-08-29 10:10:40">   
        </label> 
      </div>   
-     <!-- Cinturão --> 
 
-     <div class="col-md-10"> <br> 
-      <label for="cinturao_id">Cinturão :
-        <select id="cinturao_id" name="cinturao_id">
-
-          @foreach($cinturao_id as $cnt)
-          <option value="{{$cnt->nome}}">{{$cnt->nome}} </option>
-          @endforeach
-        </select>
-      </label>    
-    </div> 
-
-  </div> 
+   </div> 
 
 
-  <!-- Outros detalhes --> 
+   <!-- Outros detalhes --> 
 
-  <div class="form-group col-md-12">
-   <br> <label for="descricao" class="col-sm-2 col-form-label col-form-label-sm">Outros detalhes
+   <div class="form-group col-md-12">
+     <br> <label for="descricao" class="col-sm-2 col-form-label col-form-label-sm">Outros detalhes
 
-    <br> <br><textarea name="nota" rows="8" cols="80"></textarea> 
-  </label>
-</div>
+      <br> <br><textarea name="nota" rows="8" cols="80"></textarea> 
+    </label>
+  </div>
 
-<div class="form-group col-md-4"> 
-  <button type="submit" class="btn btn-success" style="margin-left:38px">Atribuir cinturão a atleta</button>  
-  <!-- -->
-</div>
+  <div class="form-group col-md-4"> 
+    <button type="submit" class="btn btn-success" style="margin-left:38px">Atribuir cinturão a atleta</button>  
+    <!-- -->
+  </div>
 </form>
 
 @endsection 

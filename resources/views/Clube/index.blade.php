@@ -19,12 +19,12 @@
         <div class="form-group col-md-4"> <br>
           <a href="{{URL::to('clube/create')}}" title=""><h4>Adicionar clube</h4></a> 
           <a href="{{URL::to('atlclube')}}" title=""><h4>Ver clubes dos atletas</h4></a> 
-          <a href="{{URL::to('couchclube')}}" title=""><h4>Ver clubes dos treinadores</h4></a> 
+          <a href="{{URL::to('treinadorclube')}}" title=""><h4>Ver clubes dos treinadores</h4></a> 
         </div>
 
         <thead> 
           <tr>
-            <th>ID</th>
+            {{-- <th>ID</th> --}}
             <th>Nome</th> 
            {{--  <th>Criado em</th>
             <th>Actualizado em</th>  --}} 
@@ -33,7 +33,7 @@
         <tbody>
           @foreach($clube as $post)
           <tr>
-            <td>{{$post['id']}}</td>
+            {{-- <td>{{$post['id']}}</td> --}}
             <td>{{$post['nome']}}</td> 
             {{-- <td>{{$post['created_at']}}</td>
             <td>{{$post['updated_at']}}</td> --}} 

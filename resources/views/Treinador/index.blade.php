@@ -17,7 +17,7 @@
         <a href="{{URL::to('couchclube')}}" title=""><h4>Ver clube</h4></a>
 
         <tr>
-          <th>ID</th>
+          {{-- <th>ID</th> --}}
           <th>Nome</th> 
           <th>Apelido</th>  
           <th>Sexo</th>
@@ -32,7 +32,7 @@
 <tbody>
   @foreach($treinador as $post)
   <tr>
-    <td>{{$post['id'        ]}}</td>
+    {{-- <td>{{$post['id'        ]}}</td> --}}
     <td>{{$post['nome'      ]}}</td>
     <td>{{$post['apelido'   ]}}</td>  
     <td>{{$post['sexo'      ]}}</td>

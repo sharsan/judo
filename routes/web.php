@@ -17,7 +17,6 @@ Route::resource('atlclube'  , 'AtlClubeController'  );
 Route::resource('atlesc'   , 'AtlEscalaoController'      );  
 Route::resource('couch', 'TreinadorController'    );
 Route::resource('peso'    , 'AtlPesoController'       ); 
-Route::resource('couchclube'  , 'CouchClubeController'    );
 
 Route::resource('categoria' , 'CategoriaController'    );  
 
@@ -29,6 +28,8 @@ Route::resource('estado'    , 'EstadoController'       );
 
 Route::resource('et'        , 'EsttController'         ); 
 
+Route::resource('escalao'        , 'EscalaoController'         ); 
+
 Route::resource('finalista' , 'FinalistaController'    );  
 Route::resource('inicio'    , 'InicioController'       );  
 Route::resource('grupo'     , 'GrupoController'        ); 
@@ -38,6 +39,7 @@ Route::resource('qlf'       , 'QualificacoesController');
 
 Route::resource('tatami12'    , 'Tatami12Controller'       ); 
 Route::resource('tatami34'    , 'Tatami34Controller'       ); 
+Route::resource('treinadorclube'  , 'TreinadorClubesController'    );
 Route::resource('standard'  , 'StandardController'     ); 
 
 

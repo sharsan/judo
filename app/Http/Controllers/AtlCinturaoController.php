@@ -64,8 +64,7 @@ class AtlCinturaoController extends Controller
   ]);
    AtlCinturao::create($request->all());
    return back()->with('success', 'Cinturão atribuído ao atleta com sucesso'); 
- }
-
+ } 
 
  public function destroy($id)
  {

@@ -5,6 +5,8 @@ use Illuminate\Http\Request;
 use App\Http\Requests;  
 use App\Atleta; 
 
+// use App\AtlPeso; 
+
 class AtletaController extends Controller
 {   
 
@@ -73,7 +75,7 @@ class AtletaController extends Controller
 
  public function show($id) 
  { 
-  $atleta = Atleta::find($id);
+  $atleta = Atleta::find($id); 
 
   return view('atleta.show', ['atleta' =>$atleta]); 
 } 

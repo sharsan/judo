@@ -13,7 +13,7 @@
    <center><h2> Competidores do grupo A</h2> </center> <br>
    <thead>
     <tr>
-      <th>ID</th> 
+      {{-- <th>ID</th>  --}}
       <th>Torneio</th> 
       <th>Atleta 1</th>
       <th>Escalão</th> 
@@ -24,7 +24,7 @@
   <tbody>
     @foreach($grupo as $post)
     <tr>
-      <td>{{$post['id']}}</td> 
+      {{-- <td>{{$post['id']}}</td>  --}}
       <td>{{$post['torneio']}}</td>
       <td>{{$post['atleta1']}}</td>
       <td>{{$post['escalao']}}</td>

@@ -23,7 +23,7 @@
          
          <thead>
           <tr>
-            <th>ID</th>  
+            {{-- <th>ID</th>   --}}
             <th>Torneio</th> 
             <th>Escalão</th>   
             <th>Atleta A </th>
@@ -31,14 +31,14 @@
             <th>Atleta C </th>
             <th>Atleta D </th>
             <th>Júri</th>
-            <th>Criado em</th>
-            <th>Actualizado em</th>  
+         {{--    <th>Criado em</th>
+            <th>Actualizado em</th>  --}} 
           </tr>
         </thead>
         <tbody>
           @foreach($grupo as $post)
           <tr>
-            <td>{{$post['id']}}</td> 
+            {{-- <td>{{$post['id']}}</td>  --}}
             <td>{{$post['torneio']}}</td>
             <td>{{$post['escalao']}}</td> 
             <td>{{$post['atleta1']}}</td>
@@ -46,8 +46,8 @@
             <td>{{$post['atleta3']}}</td>
             <td>{{$post['atleta4']}}</td>
             <td>{{$post['juri']}}</td>
-            <td>{{$post['created_at']}}</td>
-            <td>{{$post['updated_at']}}</td> 
+         {{--    <td>{{$post['created_at']}}</td>
+         <td>{{$post['updated_at']}}</td> --}} 
 
             
             <td><a href="{{action('GrupoController@edit', $post['id'])}}" class="btn btn-success">Editar</a></td>
