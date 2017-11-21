@@ -12,15 +12,16 @@ Route::get('/', function () {
 Route::resource('arbitro'   , 'ArbitroController'      );
 Route::resource('atleta'    , 'AtletaController'       ); 
 Route::resource('atlcat' , 'AtlCategoriaController'    ); 
-Route::resource('atlcinto'     , 'AtlCinturaoController'        );  
+Route::resource('atlcinto'     , 'AtlCinturaoController');  
 Route::resource('atlclube'  , 'AtlClubeController'  );  
-Route::resource('atlesc'   , 'AtlEscalaoController'      );  
-Route::resource('couch', 'TreinadorController'    );
-Route::resource('peso'    , 'AtlPesoController'       ); 
+Route::resource('atlesc'   , 'AtlEscalaoController');  
+Route::resource('couch', 'TreinadorController'    ); 
+
+Route::resource('atletapeso'    , 'AtletaPesoController'); 
 
 Route::resource('categoria' , 'CategoriaController'    );  
 
-Route::resource('cinturao'     , 'CinturaoController'        ); 
+Route::resource('cinturao'     , 'CinturaoController'  ); 
 
 Route::resource('clube'     , 'ClubeController'        ); 
 
@@ -28,7 +29,7 @@ Route::resource('estado'    , 'EstadoController'       );
 
 Route::resource('et'        , 'EsttController'         ); 
 
-Route::resource('escalao'        , 'EscalaoController'         ); 
+Route::resource('escalao'        , 'EscalaoController' ); 
 
 Route::resource('finalista' , 'FinalistaController'    );  
 Route::resource('inicio'    , 'InicioController'       );  
@@ -39,7 +40,7 @@ Route::resource('qlf'       , 'QualificacoesController');
 
 Route::resource('tatami12'    , 'Tatami12Controller'       ); 
 Route::resource('tatami34'    , 'Tatami34Controller'       ); 
-Route::resource('treinadorclube'  , 'TreinadorClubesController'    );
+Route::resource('treinadorclube'  , 'TreinadorClubesController');
 Route::resource('standard'  , 'StandardController'     ); 
 
 

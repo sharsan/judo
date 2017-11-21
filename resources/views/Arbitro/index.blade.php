@@ -3,12 +3,16 @@
 <title>Arbitros </title>
 <div class="container"> 
   <h3><center><th>Árbitros</th></center> </h3>
-
-
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
   
+  <table class="table table-striped" id="myTable">  
+    <br> 
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <!-- Navbar content -->
+    </nav> 
+    
+    <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
-  <table class="table table-striped" id="myTable"> 
+
     <a href="{{URL::to('arbitro/create')}}" title=""><h4>Adicionar arbitro</h4></a>
     <thead>
       <tr>

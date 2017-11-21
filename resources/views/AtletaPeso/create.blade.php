@@ -22,7 +22,7 @@
 </div><br>
 @endif
 
-<form method="post" action="{{url('atlpeso')}}">
+<form method="post" action="{{url('peso')}}">
   {{csrf_field()}}
 
 
@@ -34,21 +34,19 @@
       <div class="col-md-12"> 
        <label for="data">Data da pesagem :
          <meta charset="utf-8"> 
-         <meta name="data" content="referrer"> 
-         <input type="date" placeholder="Ex: 2017-10-29 08:10:43">   
+         <input type="date" name="data" placeholder placeholder="Ex: 2016-08-29 10:10:40">   
        </label> 
      </div> 
-   </div>    
-
+   </div>      
 
    <!-- Nome do campeonato  -->  
    <div class="form-group col-md-8">   
 
      <div class="col-md-8"> <br> 
-      <label for="atleta">Atleta :
-        <select id="atleta" name="atleta">
+      <label for="atleta_id">Atleta :
+        <select id="atleta_id" name="atleta_id">
 
-          @foreach($atleta as $atl)
+          @foreach($atleta_id as $atl)
           <option value="{{$atl->nome}}">{{$atl->nome}} </option>
           @endforeach
         </select>

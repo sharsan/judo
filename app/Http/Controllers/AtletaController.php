@@ -19,7 +19,7 @@ class AtletaController extends Controller
 
   public function create()
   {              
-   $atleta =Atleta::all();   
+   $atleta = Atleta::all();   
 
    return view("atleta.create", compact('atleta'));
  }   
@@ -62,17 +62,8 @@ class AtletaController extends Controller
    return back()->with('success', 'Atleta adicionado com sucesso');
    
         // return redirect('/atleta');
- }  
-
-//  public function show($id) 
-//  { 
-//   $atleta = Atleta::find($id);
-
-//   return view('atleta.show',compact('atleta')); 
-// } 
-
-
-
+ }   
+ 
  public function show($id) 
  { 
   $atleta = Atleta::find($id); 

@@ -6,79 +6,59 @@ use Illuminate\Http\Request;
 
 class PesoController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+ $peso = Peso::all()->toArray();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
+ return view('atlpeso.index', compact('peso'));
+}
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
+public function create()
+{
+ $peso = Peso::all();
+ return view("atlpeso.create",compact('peso')); 
+} 
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
+public function edit($id)
+{
+ $peso = Peso::find($id);
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
+ return view('atlpeso.edit', compact('peso','id')); 
+} 
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+public function store(Request $request)
+{     
+   $this->validate(request(), [ 
+       'peso'=> 'is_double()|min:10|max:120', 
+   ]);
+   $peso = new Peso([
+    'peso' => $request->get('peso'),  
+    // 'descricao' => $request->get('descricao')
+               //campos de exigencia de valores
+]);
+   Peso::create($request->all());
+   return back()->with('success', 'Registro do ppeso adicionado com sucesso'); 
+
+}
+
+public function update(Request $request, $id)
+{     
+   request()->validate(  
+      [   
+          'atleta' => 'required',
+          'peso'=> 'is_double()|min:10|max:120', 
+          'data' => 'required'
+      ]); 
+   Peso::find($id)->update($request->all());
+   return redirect()->route('peso.index')
+
+   ->with('success','Peso actualizado com sucesso');  
+}
+
+public function destroy($id)
+{
+   $peso = Peso::find($id);
+   $peso->delete();
+
+   return redirect('/peso');
+}  
 }

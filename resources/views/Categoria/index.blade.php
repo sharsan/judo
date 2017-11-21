@@ -5,14 +5,13 @@
 <div class="container"> 
   <h3><center><th>Categorias</th></center> </h3>
   
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
-
   <table class="table table-striped" id="myTable">  
-    <br>
-
+    <br> 
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <!-- Navbar content -->
-    </nav>  
+    </nav> 
+    
+    <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
