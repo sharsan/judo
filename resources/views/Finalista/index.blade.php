@@ -5,9 +5,9 @@
  <h3><center><th>Finalistas por escalões</th></center> </h3>
 
 
- <h3><th>Tatami 1</th></h3>
-
  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+
+ <h3><th>Tatami 1</th></h3>
 
  <table class="table table-striped" id="myTable">  
   <br>  
@@ -37,7 +37,7 @@
 
    <thead>
     <tr>
-      <th>ID</th> 
+      {{-- <th>ID</th>  --}}
       <th>Torneio</th> 
       <th>Vencedor</th> 
       <th>Escalão</th>  
@@ -47,7 +47,7 @@
 
   @foreach($tatami34 as $post)
   <tr>
-    <td>{{$post['id']}}</td> 
+    {{-- <td>{{$post['id']}}</td>  --}}
     <td>{{$post['torneio']}}</td> 
     <td>{{$post['vencedor34']}}</td>  
     <td>{{$post['escalao']}}</td> 
@@ -62,7 +62,7 @@
       <thead>   <a href="{{URL::to('finalista/create')}}" title=""><h4> + Registrar final</h4></a>
 
         <tr>
-          <th>ID</th> 
+          {{-- <th>ID</th>  --}}
           <th>Nome do campeonato</th>
           <th>Escalão</th> 
           <th>1º lugar</th>
@@ -75,7 +75,7 @@
   <tbody>
     @foreach($finalista as $post)
     <tr>
-      <td>{{$post['id']}}</td>
+      {{-- <td>{{$post['id']}}</td> --}}
       <td>{{$post['torneio']}}</td>
       <td>{{$post['escalao']}}</td>
       <td>{{$post['primeiro']}}</td>

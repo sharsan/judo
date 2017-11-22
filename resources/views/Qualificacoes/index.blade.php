@@ -4,11 +4,14 @@
 <div class="container"> 
  <h3><center><th>Qualificações</th></center> </h3>
 
- <a href="{{URL::to('grupo')}}" title=""><h4> Fase de grupos</h4></a>
+ <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+  <!-- Navbar content -->
+</nav> 
+<a href="{{URL::to('grupo')}}" title=""><h4> Fase de grupos</h4></a>
 
- <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+<input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
- <table class="table table-striped" id="myTable">  
+<table class="table table-striped" id="myTable">  
   <br> 
 
   <thead>   <a href="{{URL::to('finalista/create')}}" title=""><h4>+ adicionar finalistas</h4></a>
@@ -77,3 +80,4 @@
 }
 
 </script>
+@endsection

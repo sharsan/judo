@@ -21,8 +21,8 @@
 
       <div class="form-group col-md-4"> <br>
         <a href="{{URL::to('atleta')}}" title=""><h4>Atletas</h4></a> 
-        <a href="{{URL::to('peso')}}" title=""><h4>Pesos</h4></a> 
-        <a href="{{URL::to('peso/create')}}" title=""><h4>Registrar peso do atleta</h4></a> 
+        <a href="{{URL::to('atletapeso')}}" title=""><h4>Pesos</h4></a> 
+        <a href="{{URL::to('atletapeso/create')}}" title=""><h4>Registrar peso do atleta</h4></a> 
       </div>
 
       <thead> 

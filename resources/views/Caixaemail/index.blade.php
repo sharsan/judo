@@ -23,12 +23,12 @@
       <thead>    
 
         <div class="form-group col-md-4"> <br>
-          <a href="{{URL::to('mail/create')}}" title=""><h4>Adicionar email</h4></a> 
+          <a href="{{URL::to('mail/create')}}" title=""><h4>Escrever email</h4></a> 
         </div>
         
         <thead>
           <tr>
-            <th>ID</th>
+            {{-- <th>ID</th> --}}
             <th>Emissor</th>  
             <th>Assunto</th>  
             <th>Conteúdo</th>    
@@ -38,8 +38,8 @@
         <tbody>
           @foreach($caixaemail as $post)
           <tr>
-            <td>{{$post['id']}}</td> 
-            <td>{{$post['sender_name']}}</td>   
+            {{-- <td>{{$post['id']}}</td>  --}}
+            <td>{{$post['user_name']}}</td>   
             <td>{{$post['subject']}}</td> 
             <td>{{$post['content']}}</td>  
             <td>{{$post['created_at']}}</td> 

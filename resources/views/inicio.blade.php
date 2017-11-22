@@ -17,12 +17,12 @@
 <title>Home</title>
 <div class="container"> 
   <div class="form-group row"><center>
-    
-   <a href="{{URL::to('daw')}}" title="" class="btn btn-warning"><h4>Email</h4></a> 
+
+   <a href="{{URL::to('mail')}}" title="" class="btn btn-warning"><h4>Email</h4></a> 
 
    <a href="{{URL::to('atleta')}}" title="" class="btn btn-warning"><h4>Atletas</h4></a>  
 
-   <a href="{{URL::to('couch')}}" title="" class="btn btn-warning"><h4>Treinadores</h4></a> 
+   <a href="{{URL::to('treinador')}}" title="" class="btn btn-warning"><h4>Treinadores</h4></a> 
    
    <a href="{{URL::to('clube')}}" title="" class="btn btn-warning"><h4>Clubes</h4></a> 
 

@@ -1,9 +1,9 @@
 @extends('admin')
 @section('content')
-<title>Cinturões dos atletas </title>
+<title>Cores dos Cinturões</title>
 
 <div class="container"> 
-  <h3><center><th>Cinturões - Atletas</th></center> </h3>
+  <h3><center><th>Cores dos Cinturões</th></center> </h3>
 
 
   <table class="table table-striped" id="myTable">  

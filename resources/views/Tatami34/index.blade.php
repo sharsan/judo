@@ -34,7 +34,7 @@
   </table> 
   <center><h3> Vencedores do grupo B</h3></center>
 
-  <a href="{{URL::to('tatami34/create')}}" title=""><h4>+ Registrar outro vencedor do escalão B</h4></a> 
+  <a href="{{URL::to('tatami34/create')}}" title=""><h4>+ Registrar uma luta do grupo B</h4></a> 
   <table class="table table-striped">   
 
    <thead>

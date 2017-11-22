@@ -1,6 +1,6 @@
 @extends('admin')
 @section('content')
-<title>Cinturões </title>
+<title>Cinturões - Atletas</title>
 
 <div class="container"> 
   <h3><center><th>Cinturões - Atletas</th></center> </h3>
@@ -14,8 +14,8 @@
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
 
-        <a href="{{URL::to('atleta_id')}}" title=""><h4>Atletas</h4></a>
-        <a href="{{URL::to('cinturao_id')}}" title=""><h4>Cintos</h4></a>
+        <a href="{{URL::to('atleta')}}" title=""><h4>Atletas</h4></a>
+        <a href="{{URL::to('cintocores')}}" title=""><h4>Cintos</h4></a>
 
         <div class="form-group col-md-4"> <br>
           <a href="{{URL::to('atlcinto/create')}}" title=""><h4>Atribuir cinturão ao atleta</h4></a> 
@@ -26,7 +26,7 @@
             {{-- <th>ID</th> --}}
             <th>Atleta</th>
             <th>Cinto</th>  
-            <th>Graduado em</th> 
+            <th>Data da graduação</th> 
     {{--         <th>Criado em</th>
       <th>Actualizado em</th>  --}} 
     </tr>

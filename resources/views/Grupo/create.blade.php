@@ -3,7 +3,7 @@
 <title>Fase de grupos </title>
 <div class="container">  
   <center><h3>Registrar competidores a um grupo</h3> </center> 
-  <a href="{{URL::to('grupo')}}" title=""><h4><- voltar</h4></a><br>
+  <a href="{{URL::to('grupo')}}" title=""><h4>Grupos</h4></a><br>
 
   <h4>Lista de inscritos</h4> 
   @if ($errors->any())
@@ -49,7 +49,7 @@
   @endforeach
 </table>
 
-<center><h2>Registrar grupo</h2> </center> 
+<center><h2>Registrar grupo</h2> </center>  
 
 <form method="post"  action="{{url('grupo')}}">
 
@@ -60,8 +60,8 @@
      <!-- Nome do campeonato  -->  
 
      <div class="col-md-10"> <br> 
-      <label for="nome"> Nome do Torneio :
-        <select id="nome" name="nome">
+      <label for="torneio"> Nome do Torneio :
+        <select id="torneio" name="torneio">
 
           @foreach($torneio as $tor)
           <option value="{{$tor->nome}}">{{$tor->nome}} </option>
@@ -80,6 +80,16 @@
         </select>
       </label>    
     </div> 
+
+    <!-- Sexo --> 
+    <div class="col-md-3">  <br> 
+      <label for="sexo">Sexo :
+        <input type="radio" class="form-check-input" name="sexo" value="M" checked></input> 
+        M
+        <input class="form-check-input" type="radio" name="sexo" id="F" value="F"></input> 
+        F
+      </label> 
+    </div>
 
     <!-- juri : -->
     <div class="col-md-10"> <br> 
@@ -101,47 +111,47 @@
        <!-- competidor A -->
 
        <label> 
-         <a href="{{URL::to('inscrito/create')}}" title=""><h4>+ Adicionar competidor</h4></a>
+         <a href="{{URL::to('inscrito/create')}}" title=""><h4>+ Inscrever competidores</h4></a>
        </label>   
        <div class="col-md-10"> <br> 
-        <label for="A"> Atleta A :
-          <select id="A" name="A">
+        <label for="atleta1"> Atleta A :
+          <select id="atleta1" name="atleta1">
 
             @foreach($inscrito as $insc)
-            <option value="{{$insc->competidor}}">{{$insc->atleta}} </option>
+            <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
             @endforeach
           </select> 
         </label>    
       </div> 
       <!-- competidor B -->
       <div class="col-md-10"> 
-        <label for="B"> Atleta B :
-         <select id="B" name="B">
+        <label for="atleta2"> Atleta B :
+         <select id="atleta2" name="atleta2">
 
-          @foreach($inscrito as $insc)
-          <option value="{{$insc->competidor}}">{{$insc->atleta}} </option>
+          @foreach($inscrito as $insc2)
+          <option value="{{$insc2->atleta}}">{{$insc2->atleta}} </option>
           @endforeach
         </select> 
       </label>
     </div> 
     <!-- competidor C -->
     <div class="col-md-10"> 
-      <label for="C"> Atleta C :
-        <select id="C" name="C">
+      <label for="atleta3"> Atleta C :
+        <select id="atleta3" name="atleta3">
 
           @foreach($inscrito as $insc)
-          <option value="{{$insc->competidor}}">{{$insc->atleta}} </option>
+          <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
           @endforeach
         </select> 
       </label>
     </div>
     <!-- competidor D -->
     <div class="col-md-10"> 
-      <label for="D"> Atleta D :
-        <select id="D" name="D">
+      <label for="atleta4"> Atleta D :
+        <select id="atleta4" name="atleta4">
 
           @foreach($inscrito as $insc)
-          <option value="{{$insc->competidor}}">{{$insc->atleta}} </option>
+          <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
           @endforeach
         </select> 
       </label>

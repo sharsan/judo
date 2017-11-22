@@ -7,7 +7,7 @@
 <body>
   <div class="container">
     <h2>Registrar treinador</h2><br>
-    <a href="{{URL::to('couch')}}" title=""><h4><- voltar</h4></a>
+    <a href="{{URL::to('treinador')}}" title=""><h4>Treinador</h4></a>
     
     @if ($errors->any())
     <div class="alert alert-danger">

@@ -12,6 +12,7 @@ class CreateGruposTable extends Migration
             $table->increments('id'); 
             $table->string('torneio',40);
             $table->string('escalao',30);
+            $table->string('sexo', 2); 
             $table->string('atleta1', 45);
             $table->string('atleta2', 45);
             $table->string('atleta3', 45);

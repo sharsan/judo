@@ -15,13 +15,13 @@ Route::resource('atlcat' , 'AtlCategoriaController'    );
 Route::resource('atlcinto'     , 'AtlCinturaoController');  
 Route::resource('atlclube'  , 'AtlClubeController'  );  
 Route::resource('atlesc'   , 'AtlEscalaoController');  
-Route::resource('couch', 'TreinadorController'    ); 
+Route::resource('treinador', 'TreinadorController'    ); 
 
 Route::resource('atletapeso'    , 'AtletaPesoController'); 
 
 Route::resource('categoria' , 'CategoriaController'    );  
 
-Route::resource('cinturao'     , 'CinturaoController'  ); 
+Route::resource('cintocores'     , 'CinturaoController'  ); 
 
 Route::resource('clube'     , 'ClubeController'        ); 
 

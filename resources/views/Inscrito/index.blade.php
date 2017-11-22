@@ -6,15 +6,17 @@
 
 
 
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
-  
   
   <table class="table table-striped" id="myTable"> 
     <br>
     <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
       <!-- Navbar content -->
-    </nav>   
-    <a href="{{URL::to('inscrito/create')}}" title=""><h4>Adicionar competidor</h4></a>
+    </nav>  
+    
+    <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+    
+    <a href="{{URL::to('grupo')}}" title=""><h4>Grupos</h4></a>
+    <a href="{{URL::to('inscrito/create')}}" title=""><h4>Inscrever competidor</h4></a>
     <thead>
       <tr>
         {{-- <th>ID</th> --}}

@@ -3,7 +3,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;  
-use App\Atleta; 
+use App\Atleta;  
+use App\AtletaPeso; 
+use App\Cinturao; 
 
 // use App\AtlPeso; 
 
@@ -66,14 +68,41 @@ class AtletaController extends Controller
  
  public function show($id) 
  { 
-  $atleta = Atleta::find($id); 
 
-  return view('atleta.show', ['atleta' =>$atleta]); 
-} 
+   
+// $this->db->select('*');
+// $this->db->from('articles');
+// $this->db->join('category', 'category.id = articles.id');
+// $this->db->join('comments', 'comments.id = articles.id');
+
+// $query = $this->db->get();
 
 
-public function destroy($id)
-{
+
+  // $atletapeso = AtletaPeso::all();
+  // $atletapeso_id = AtletaPeso::all();
+  // $cinturao_id = Cinturao::all();  
+  // $atleta = Atleta::all()->join(Cinturao::all())->join(AtletaPeso::all())
+
+  // ->select('atleta.nome', 'cinturao.*', 'pesos.*')->get();
+
+
+
+
+  // $processos = Processo::join('autores', 'autores.processo_id', 'processos.id')
+  // ->join('reus', 'reus.processo_id', 'processos.id')
+  // ->join('pessoas', 'autores.pessoa_id', 'pessoas.id')
+  // ->join('pessoas', 'reus.pessoa_id', 'pessoas.id')
+  // ->select('pessoas.nome as nome_pessoa', 'processos.*', 'autores.*', 'reus.*')->get()
+
+  // $atleta = Atleta::find($id); 
+
+  // return view('atleta.show', ['atleta' =>$atleta]); 
+ } 
+
+
+ public function destroy($id)
+ {
   $atleta = Atleta::find($id);
   $atleta->delete();
 

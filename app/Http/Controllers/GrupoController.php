@@ -61,30 +61,30 @@ class GrupoController extends Controller
      'descricao' => $request->get('descricao') 
    ]);
 
-   $existe=Grupo::where("torneio",$request->get('torneio'))->where("escalao",$request->get('escalao'))->exists();
+   // $existe=Grupo::where("torneio",$request->get('torneio'))->where("escalao",$request->get('escalao'))->exists();
 
-   if($existe==false){
-     Grupo::create($request->all()); 
-     return back()->with('success', 'Grupo adicionado com sucesso');
-   }else{
-    return back()->with('success', 'Ja existe este registo');
-  }
-} 
-public function update(Request $request, $id)
+   // if($existe==false){
+   Grupo::create($request->all()); 
+   return back()->with('success', 'Grupo adicionado com sucesso');
+//  }else{
+//   return back()->with('success', 'Ja existe este registo');
+// }
+ } 
+ public function update(Request $request, $id)
 
-{   request()->validate(
- [ 
+ {   request()->validate(
+   [ 
 
-   'torneio' => 'required|max:40',  
-   'escalao' => 'required|max:40',  
-   'atleta1' => 'required|max:40',  
-   'atleta2' => 'required|max:40'   
- ]);
-Grupo::find($id)->update($request->all());
+     'torneio' => 'required|max:40',  
+     'escalao' => 'required|max:40',  
+     'atleta1' => 'required|max:40',  
+     'atleta2' => 'required|max:40'   
+   ]);
+ Grupo::find($id)->update($request->all());
 
-return redirect()->route('grupo.index')
+ return redirect()->route('grupo.index')
 
-->with('success','Grupo Actualizado com sucesso'); 
+ ->with('success','Grupo Actualizado com sucesso'); 
 } 
 
 public function destroy($id)

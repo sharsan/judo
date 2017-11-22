@@ -4,7 +4,7 @@
 <div class="container"> 
  <h2>Inscrever competidor</h2><br> 
  
- <a href="{{URL::to('inscrito')}}" title=""><h4><- voltar</h4></a>   
+ <a href="{{URL::to('inscrito')}}" title=""><h4>Inscritos</h4></a>   
 
  @if ($errors->any())
  <div class="alert alert-danger">

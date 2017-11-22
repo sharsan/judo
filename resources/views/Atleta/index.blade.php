@@ -9,17 +9,17 @@
   
   <table class="table table-striped" id="myTable"> 
     <a href="{{URL::to('atleta/create')}}" title=""><h4>Adicionar atleta</h4></a>
-    <a href="{{URL::to('peso')}}" title=""><h4>Ver pesagens</h4></a>
-    <a href="{{URL::to('atlcinto')}}" title=""><h4>Ver cinturões</h4></a> 
-    <thead>
-      <tr>
-        {{-- <th>ID</th> --}}
-        <th>Nome</th> 
-        <th>Apelido</th> 
-        <th>Sexo</th>
-        <th>Ano de nascimento</th>
-        <th>Telefone</th>
-        <th>email</th>  
+{{--     <a href="{{URL::to('atletapeso')}}" title=""><h4>Ver pesagens</h4></a>
+<a href="{{URL::to('atlcinto')}}" title=""><h4>Ver cinturões</h4></a>  --}}
+<thead>
+  <tr>
+    {{-- <th>ID</th> --}}
+    <th>Nome</th> 
+    <th>Apelido</th> 
+    <th>Sexo</th>
+    <th>Ano de nascimento</th>
+    <th>Telefone</th>
+    <th>email</th>  
 {{--         <th>Criado em</th>
   <th>Actualizado em</th>  --}}
 </tr>
@@ -37,7 +37,7 @@
     {{--     <td>{{$post['created_at']}}</td>
     <td>{{$post['updated_at']}}</td> --}}
 
-    <td><a href="{{action('AtletaController@show', $post['id'])}}" class="btn btn-primary">Detalhes</a></td>
+    {{-- <td><a href="{{action('AtletaController@show', $post['id'])}}" class="btn btn-primary">Detalhes</a></td> --}}
 
     <td><a href="{{action('AtletaController@edit', $post['id'])}}" class="btn btn-success">Editar</a></td>
     <td>

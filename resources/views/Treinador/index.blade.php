@@ -4,17 +4,21 @@
 <div class="container">
   <h3><center><th>Treinadores</th></center> </h3>
   
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
-  
   <table class="table table-striped" id="myTable">
 
+    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+      <!-- Navbar content -->
+    </nav>  
+    
+    <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+    
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
 
 
       <thead>
 
-        <a href="{{URL::to('couch/create')}}" title=""><h4>Adicionar treinador</h4></a>
-        <a href="{{URL::to('couchclube')}}" title=""><h4>Ver clube</h4></a>
+        <a href="{{URL::to('treinador/create')}}" title=""><h4>Adicionar treinador</h4></a>
+        <a href="{{URL::to('treinador/clube')}}" title=""><h4>Ver clube</h4></a>
 
         <tr>
           {{-- <th>ID</th> --}}

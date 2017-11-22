@@ -5,8 +5,6 @@
 <div class="container"> 
   <h3><center><th>Estados dos torneios</th></center> </h3>
 
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
-
   <table class="table table-striped" id="myTable">  
     <br> 
 
@@ -14,6 +12,8 @@
       <!-- Navbar content -->
     </nav> 
     
+    <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+
     <div class="row">  <!--  este div inseri pra separar o Search com o restante -->
       <thead>    
 
