@@ -25,7 +25,7 @@
   </div><br>
   @endif
 
-  <form method="post" action="{{url('couch')}}">
+  <form method="post" action="{{url('treinador')}}">
     <div class="form-group row">
      {{csrf_field()}}   
 

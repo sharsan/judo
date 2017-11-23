@@ -37,8 +37,9 @@ class AtletaController extends Controller
  { 
    request()->validate(  
     [   
-     'nome' => 'required|unique:atletas|min:3,max:40',     
-   ]); 
+      'nome' => 'required|unique:atletas|min:3,max:40',   
+     // 'email' => 'required|email|atletas:users,email',  
+    ]); 
    Atleta::find($id)->update($request->all());
    return redirect()->route('atleta.index')
 
@@ -51,13 +52,15 @@ class AtletaController extends Controller
 
    if($existe==true){
      $this->validate(request(), [
-      'ano'=> 'numeric|min:1960|max:2014',  
+      'ano'=> 'numeric|min:1960|max:2014',    
+     // 'email' => 'required|email|atletas:users,email',
     ]);
    }
    else{  
 
      $this->validate(request(), [
-       'nome' => 'required|unique:atletas|min:3,max:40', 
+       'nome' => 'required|unique:atletas|min:3,max:40',   
+     // 'email' => 'required|email|atletas:users,email',
      ]);
    }
    Atleta::create($request->all());
@@ -69,7 +72,7 @@ class AtletaController extends Controller
  public function show($id) 
  { 
 
-   
+
 // $this->db->select('*');
 // $this->db->from('articles');
 // $this->db->join('category', 'category.id = articles.id');

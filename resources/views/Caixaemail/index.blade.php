@@ -32,7 +32,7 @@
             <th>Emissor</th>  
             <th>Assunto</th>  
             <th>Conteúdo</th>    
-            <th>Data criada</th>     
+            <th>Data criado</th>     
           </tr>
         </thead>
         <tbody>

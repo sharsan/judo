@@ -15,6 +15,7 @@ Route::resource('atlcat' , 'AtlCategoriaController'    );
 Route::resource('atlcinto'     , 'AtlCinturaoController');  
 Route::resource('atlclube'  , 'AtlClubeController'  );  
 Route::resource('atlesc'   , 'AtlEscalaoController');  
+Route::resource('atltreinador'   , 'AtlTreinadorController');  
 Route::resource('treinador', 'TreinadorController'    ); 
 
 Route::resource('atletapeso'    , 'AtletaPesoController'); 

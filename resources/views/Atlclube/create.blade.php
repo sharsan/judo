@@ -3,7 +3,7 @@
 <title>Adicionar clube</title>
 <div class="container"> 
  <link rel="stylesheet" href="{{asset('css/app.css')}}">
- <h2>Registrar clube</h2><br>
+ <h2>Registrar atleta num clube</h2><br>
  <a href="{{URL::to('clube')}}" title=""><h4>Clubes</h4></a>
 
  @if ($errors->any())

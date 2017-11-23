@@ -2,7 +2,7 @@
 @section('content')
 <title>Treinadores </title> 
 <div class="container">
-  <h3><center><th>Treinadores</th></center> </h3>
+  <h2><center><th>Treinadores</th></center> </h2>
   
   <table class="table table-striped" id="myTable">
 
@@ -18,7 +18,7 @@
       <thead>
 
         <a href="{{URL::to('treinador/create')}}" title=""><h4>Adicionar treinador</h4></a>
-        <a href="{{URL::to('treinador/clube')}}" title=""><h4>Ver clube</h4></a>
+        <a href="{{URL::to('treinadorclube')}}" title=""><h4>Ver clubes</h4></a>
 
         <tr>
           {{-- <th>ID</th> --}}

@@ -5,14 +5,15 @@
 <div class="container"> 
   <h2><center><th>Clubes</th></center> </h2>
 
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav> 
 
+  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+  
   <table class="table table-striped" id="myTable">  
+
     <br> 
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-      <!-- Navbar content -->
-    </nav> 
-    
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
 
@@ -76,5 +77,5 @@
     }
   }
 
-</script>
+</script> 
 @endsection

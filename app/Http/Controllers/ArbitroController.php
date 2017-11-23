@@ -30,13 +30,15 @@ class ArbitroController extends Controller
 
    if($existe==true){
      $this->validate(request(), [
-      'ano'=> 'numeric|min:1960|max:2003',   
+      'ano'=> 'numeric|min:1960|max:2003',  
+     // 'email' => 'required|email|arbitros:users,email', 
     ]);
    }
    else{  
 
      $this->validate(request(), [
        'nome' => 'required|unique:arbitros|min:3,max:40',   
+     // 'email' => 'required|email|arbitros:users,email', 
      ]);
    }
 
@@ -59,7 +61,8 @@ class ArbitroController extends Controller
  { 
    request()->validate(  
     [   
-      'nome' => 'required|unique:atletas|min:13,max:40',  
+      'nome' => 'required|unique:arbitros|min:3,max:40',  
+     // 'email' => 'required|email|arbitros:users,email', 
     ]); 
    Arbitro::find($id)->update($request->all());
    return redirect()->route('arbitro.index')

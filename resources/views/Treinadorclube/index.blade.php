@@ -18,9 +18,9 @@
       <thead>    
 
         <div class="form-group col-md-4"> <br>
-          <a href="{{URL::to('treinadorclube/create')}}" title=""><h4>Adicionar treinador a um clube</h4></a> 
           <a href="{{URL::to('clube')}}" title=""><h4>Clubes </h4></a>  
-          <a href="{{URL::to('couch')}}" title=""><h4>Ver treinadores </h4></a>  
+          <a href="{{URL::to('treinador')}}" title=""><h4>Treinadores </h4></a> 
+          <a href="{{URL::to('treinadorclube/create')}}" title=""><h4>Adicionar treinador a um clube</h4></a>  
         </div>
 
         <thead> 

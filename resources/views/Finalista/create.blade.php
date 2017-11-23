@@ -1,6 +1,6 @@
 @extends('admin')
 @section('content')
-<title>Luta final </title>
+<title>Fazer a final </title>
 <div class="container"> 
   <center> <h2>Registrar finais de cada escalão</h2></center><br>  
 

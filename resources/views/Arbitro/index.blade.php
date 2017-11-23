@@ -2,7 +2,7 @@
 @section('content')
 <title>Arbitros </title>
 <div class="container"> 
-  <h3><center><th>Árbitros</th></center> </h3>
+  <h2><center><th>Árbitros</th></center> </h2>
   
   <table class="table table-striped" id="myTable">  
     <br> 

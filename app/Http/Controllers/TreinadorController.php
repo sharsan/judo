@@ -43,6 +43,7 @@ public function store(Request $request)
 
    $this->validate(request(), [
      'nome' => 'required|unique:treinadores|min:3,max:40',
+     // 'email' => 'required|email|treinadores:users,email',
    ]);
  }
 
@@ -66,6 +67,7 @@ public function update(Request $request, $id)
  request()->validate(  
   [   
    'nome' => 'required|unique:treinadores|min:3,max:40',
+     // 'email' => 'required|email|treinadores:users,email',
  ]); 
  Treinador::find($id)->update($request->all());
  return redirect()->route('treinador.index')
