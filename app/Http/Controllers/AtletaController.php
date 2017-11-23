@@ -47,22 +47,32 @@ class AtletaController extends Controller
  }
 
  public function store(Request $request)
- {      
+ {       
    $existe=$request->get('ano')!="";
 
    if($existe==true){
      $this->validate(request(), [
-      'ano'=> 'numeric|min:1960|max:2014',    
-     // 'email' => 'required|email|atletas:users,email',
-    ]);
+      'ano'=> 'numeric|min:1960|max:2014',  
+
+    ]);  
+
+   }
+
+   $existe=$request->get('email')!="";
+
+   if($existe==true){
+     $this->validate(request(), [
+      'email' => 'required|email', 
+
+    ]);  
+
    }
    else{  
 
      $this->validate(request(), [
        'nome' => 'required|unique:atletas|min:3,max:40',   
-     // 'email' => 'required|email|atletas:users,email',
      ]);
-   }
+   } 
    Atleta::create($request->all());
    return back()->with('success', 'Atleta adicionado com sucesso');
    

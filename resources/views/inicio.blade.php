@@ -34,7 +34,7 @@
    
    <a href="{{URL::to('grupo')}}" title="" class="btn btn-warning"><h4>Grupos</h4></a> 
 
-   <a href="{{URL::to('qlf')}}" title="" class="btn btn-warning"><h4>Competições</h4></a>  
+   <a href="{{URL::to('qlf')}}" title="" class="btn btn-warning"><h4>Qualificações</h4></a>  
 
  </center>  
 </div>

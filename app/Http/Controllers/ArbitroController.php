@@ -22,7 +22,7 @@ class ArbitroController extends Controller
  {        
    $arbitro = Arbitro::find($id);
    return view('arbitro.edit',compact('arbitro','id'));
- } 
+ }   
 
  public function store(Request $request)
  {     
@@ -31,32 +31,32 @@ class ArbitroController extends Controller
    if($existe==true){
      $this->validate(request(), [
       'ano'=> 'numeric|min:1960|max:2003',  
-     // 'email' => 'required|email|arbitros:users,email', 
-    ]);
+
+    ]);  
+
+   }
+
+   $existe=$request->get('email')!="";
+
+   if($existe==true){
+     $this->validate(request(), [
+      'email' => 'required|email', 
+
+    ]);  
+
    }
    else{  
 
      $this->validate(request(), [
        'nome' => 'required|unique:arbitros|min:3,max:40',   
-     // 'email' => 'required|email|arbitros:users,email', 
      ]);
    }
-
-   $arbitro = new Arbitro([
-    'nome' => $request->get('nome'),
-    'apelido' => $request->get('apelido'),   
-    'sexo' => $request->get('sexo'),    
-    'ano' => $request->get('ano'), 
-    'telefone' => $request->get('telefone'),
-    'email' => $request->get('email'),
-    'descricao' => $request->get('descricao')
-
-  ]);
-
+   
    Arbitro::create($request->all());
    return back()->with('success', 'Arbitro adicionado com sucesso'); 
 
  }         
+
  public function update(Request $request, $id)
  { 
    request()->validate(  

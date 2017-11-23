@@ -31,32 +31,29 @@ public function edit($id)
 }
 
 public function store(Request $request)
-{    
-  $existe=$request->get('ano')!="";
+{     
+ $existe=$request->get('ano')!="";
 
-  if($existe==true){
+ if($existe==true){
    $this->validate(request(), [
-    'ano'=> 'numeric|min:1960|max:2003',  
-  ]);
+    'ano'=> 'numeric|min:1960|max:2003',   
+  ]);   
+   
+ } 
+ $existe=$request->get('email')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'email' => 'required|email',  
+  ]);   
+
  }
  else{  
 
    $this->validate(request(), [
-     'nome' => 'required|unique:treinadores|min:3,max:40',
-     // 'email' => 'required|email|treinadores:users,email',
+     'nome' => 'required|unique:treinadores|min:3,max:40',   
    ]);
- }
-
- $treinador = new Treinador([
-  'nome' => $request->get('nome'),
-  'apelido' => $request->get('apelido'),   
-  'sexo' => $request->get('sexo'), 
-  'ano' => $request->get('ano'), 
-  'telefone' => $request->get('telefone'),
-  'email' => $request->get('email'),
-  // 'descricao' => $request->get('descricao')
-
-]);
+ } 
  Treinador::create($request->all());
  return back()->with('success', 'Treinador adicionado com sucesso'); 
 
