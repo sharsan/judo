@@ -26,60 +26,80 @@ class ArbitroController extends Controller
 
  public function store(Request $request)
  {     
-   $existe=$request->get('ano')!="";
+ // //   $existe=$request->get('telefone')!="";
 
-   if($existe==true){
-     $this->validate(request(), [
-      'ano'=> 'numeric|min:1960|max:2003',  
+ // //   if($existe==true){
+ // //     $this->validate(request(), [
 
-    ]);  
+ // //      'telefone'=> 'numeric|between:820000000,829999999', 
 
-   }
+ // //    ]);  
 
-   $existe=$request->get('email')!="";
-
-   if($existe==true){
-     $this->validate(request(), [
-      'email' => 'required|email', 
-
-    ]);  
-
-   }
-   else{  
-
-     $this->validate(request(), [
-       'nome' => 'required|unique:arbitros|min:3,max:40',   
-     ]);
-   }
+ // //   }  
    
-   Arbitro::create($request->all());
-   return back()->with('success', 'Arbitro adicionado com sucesso'); 
+  $existe=$request->get('apelido')!="";
 
- }         
+  if($existe==true){
+   $this->validate(request(), [
+    'apelido' => 'min:3,max:40',    
 
- public function update(Request $request, $id)
- { 
-   request()->validate(  
-    [   
-      'nome' => 'required|unique:arbitros|min:3,max:40',  
+  ]);  
+
+ }
+ $existe=$request->get('ano')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'ano'=> 'numeric|min:1960|max:2003',  
+
+  ]);  
+
+ }
+
+ $existe=$request->get('email')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'email' => 'required|email', 
+
+  ]);  
+
+ }
+ else{  
+
+   $this->validate(request(), [
+     'nome' => 'required|unique:arbitros|min:3,max:40',   
+   ]);
+ }
+
+ Arbitro::create($request->all());
+ return back()->with('success', 'Arbitro adicionado com sucesso'); 
+
+}         
+
+public function update(Request $request, $id)
+{ 
+ request()->validate(  
+  [   
+    'nome' => 'required|unique:arbitros|min:3,max:40',  
      // 'email' => 'required|email|arbitros:users,email', 
-    ]); 
-   Arbitro::find($id)->update($request->all());
-   return redirect()->route('arbitro.index')
+  ]); 
+ Arbitro::find($id)->update($request->all());
+ return redirect()->route('arbitro.index')
 
-   ->with('success','Arbitro actualizado com sucesso'); 
- } 
- public function destroy(Request $request, $id)
+ ->with('success','Arbitro actualizado com sucesso'); 
+} 
+public function destroy(Request $request, $id)
 
- {
+{
 
-   Arbitro::find($id)->delete();
+ Arbitro::find($id)->delete();
         // return back()->with('success', 'Arbitro apagado com sucesso');
-   return redirect()->route('arbitro.index')
+ return redirect()->route('arbitro.index')
 
-   ->with('success','Arbitro apagado com successo');
+ ->with('success','Arbitro apagado com successo');
 
- }  
+}  
  // public function testPhotoCanBeUploaded()
  // {
  //   $this->visit('/upload')

@@ -46,41 +46,53 @@ class AtletaController extends Controller
    ->with('success','Atleta actualizado com sucesso'); 
  }
 
+
+
  public function store(Request $request)
  {       
-   $existe=$request->get('ano')!="";
-
-   if($existe==true){
-     $this->validate(request(), [
-      'ano'=> 'numeric|min:1960|max:2014',  
-
-    ]);  
-
-   }
-
-   $existe=$request->get('email')!="";
-
-   if($existe==true){
-     $this->validate(request(), [
-      'email' => 'required|email', 
-
-    ]);  
-
-   }
-   else{  
-
-     $this->validate(request(), [
-       'nome' => 'required|unique:atletas|min:3,max:40',   
-     ]);
-   } 
-   Atleta::create($request->all());
-   return back()->with('success', 'Atleta adicionado com sucesso');
    
+  $existe=$request->get('apelido')!="";
+
+  if($existe==true){
+   $this->validate(request(), [
+    'apelido' => 'min:3,max:40',    
+
+  ]);  
+
+ }
+ $existe=$request->get('ano')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'ano'=> 'numeric|min:1960|max:2014',  
+
+  ]);  
+
+ }
+
+ $existe=$request->get('email')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'email' => 'required|email', 
+
+  ]);  
+
+ }
+ else{  
+
+   $this->validate(request(), [
+     'nome' => 'required|unique:atletas|min:3,max:40',   
+   ]);
+ } 
+ Atleta::create($request->all());
+ return back()->with('success', 'Atleta adicionado com sucesso');
+
         // return redirect('/atleta');
- }   
- 
- public function show($id) 
- { 
+}   
+
+public function show($id) 
+{ 
 
 
 // $this->db->select('*');
@@ -111,11 +123,11 @@ class AtletaController extends Controller
   // $atleta = Atleta::find($id); 
 
   // return view('atleta.show', ['atleta' =>$atleta]); 
- } 
+} 
 
 
- public function destroy($id)
- {
+public function destroy($id)
+{
   $atleta = Atleta::find($id);
   $atleta->delete();
 

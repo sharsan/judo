@@ -32,6 +32,15 @@ public function edit($id)
 
 public function store(Request $request)
 {     
+  $existe=$request->get('apelido')!="";
+
+  if($existe==true){
+   $this->validate(request(), [
+    'apelido' => 'min:3,max:40',    
+
+  ]);  
+
+ } 
  $existe=$request->get('ano')!="";
 
  if($existe==true){
