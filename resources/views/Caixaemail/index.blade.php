@@ -9,7 +9,7 @@
       <!-- Navbar content -->
     </nav> 
 
-    <a href="{{URL::to('caixaemail/create')}}" title=""><h4><- voltar</h4></a> 
+    {{-- <a href="{{URL::to('caixaemail/create')}}" title=""><h4><- voltar</h4></a>  --}}
     <div class="col-lg-4">
       <div class="input-group">
         <input type="text" class="form-control" placeholder="Insira a palavra a pesquisar..." aria-label="pesquisar">

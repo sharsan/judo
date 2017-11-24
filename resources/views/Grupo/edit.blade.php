@@ -1,9 +1,9 @@
 @extends('admin')
 @section('content')
-<title>Actualizando grupos </title>
+<title>Editar grupos </title>
 <div class="container"> 
   <h2>Registrar grupo</h2><br> 
-  <a href="{{URL::to('grupo')}}" title=""><h4><- voltar</h4></a>
+  <a href="{{URL::to('grupo')}}" title=""><h4>Grupos</h4></a>
 
   @if ($errors->any())
   <div class="alert alert-danger">

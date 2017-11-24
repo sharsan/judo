@@ -6,6 +6,10 @@
   <h3><center><th>Escalões</th></center> </h3>
 
 
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav> 
+  
   <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
   <table class="table table-striped" id="myTable">    

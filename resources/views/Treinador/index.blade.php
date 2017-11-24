@@ -15,10 +15,11 @@
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
 
 
-      <thead>
+      <thead><br>
 
         <a href="{{URL::to('treinador/create')}}" title=""><h4>Adicionar treinador</h4></a>
         <a href="{{URL::to('treinadorclube')}}" title=""><h4>Ver clubes</h4></a>
+        <a href="{{URL::to('atltreinador')}}" title=""><h4>Ver alunos</h4></a>
 
         <tr>
           {{-- <th>ID</th> --}}

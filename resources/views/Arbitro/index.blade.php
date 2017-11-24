@@ -13,7 +13,7 @@
     <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
 
-    <a href="{{URL::to('arbitro/create')}}" title=""><h4>Adicionar arbitro</h4></a>
+    <br><a href="{{URL::to('arbitro/create')}}" title=""><h4>Adicionar arbitro</h4></a>
     <thead>
       <tr>
         {{-- <th>ID</th> --}}

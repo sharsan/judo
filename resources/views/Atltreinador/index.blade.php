@@ -4,6 +4,9 @@
 <div class="container">
   <h3><center><th>Atletas - Treinadores</th></center> </h3>
   
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav>   
   
   <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
 
@@ -19,8 +22,8 @@
 
         <tr>
           {{-- <th>ID</th> --}} 
-          <th>Atleta</th> 
           <th>Treinador</th> 
+          <th>Atleta</th> 
          {{--  <th>Criado em</th>
           <th>Actualizado em</th>  --}}
 
@@ -30,8 +33,8 @@
         @foreach($atltreinador as $post)
         <tr>
           {{-- <td>{{$post['id'        ]}}</td> --}} 
-          <td>{{$post['atleta_id'     ]}}</td> 
           <td>{{$post['treinador_id']}}</td> 
+          <td>{{$post['atleta_id'     ]}}</td> 
   {{--         <td>{{$post['created_at']}}</td>
   <td>{{$post['updated_at']}}</td> --}}
 

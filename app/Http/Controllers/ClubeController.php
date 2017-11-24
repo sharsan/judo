@@ -11,10 +11,10 @@ class ClubeController extends Controller
    
    return view('clube.index', compact('clube'));
  }
-
+ 
  public function create()
  {
-   $clube = new Clube();
+   $clube = Clube::all();
    return view("clube.create",compact('clube')); 
  } 
 

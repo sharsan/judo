@@ -27,7 +27,7 @@
           <input type="text" name="user_name" id="user_name" class="form-control"> 
         </div>
 
-        <div class="form-group"> 
+        <div class="form-group">  
           <label for="sender_email"> Sender Email: </label>
           <input type="text" name="sender_email" id="sender_email" class="form-control">
         </input>

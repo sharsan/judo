@@ -1,6 +1,6 @@
 @extends('admin')
 @section('content')
-<title>Fase de grupos </title>
+<title>Registros de grupos </title>
 <div class="container">  
   <center><h3>Registrar competidores a um grupo</h3> </center> 
   <a href="{{URL::to('grupo')}}" title=""><h4>Grupos</h4></a><br>
@@ -49,7 +49,7 @@
   @endforeach
 </table>
 
-<center><h2>Registrar grupo</h2> </center>  
+<center><h2>Registrar competidores a um grupo</h2> </center>  
 
 <form method="post"  action="{{url('grupo')}}">
 

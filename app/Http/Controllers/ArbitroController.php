@@ -36,7 +36,7 @@ class ArbitroController extends Controller
  // //    ]);  
 
  // //   }  
-   
+
   $existe=$request->get('apelido')!="";
 
   if($existe==true){
@@ -79,16 +79,46 @@ class ArbitroController extends Controller
 
 public function update(Request $request, $id)
 { 
- request()->validate(  
-  [   
-    'nome' => 'required|unique:arbitros|min:3,max:40',  
+
+  $existe=$request->get('apelido')!="";
+
+  if($existe==true){
+   $this->validate(request(), [
+    'apelido' => 'min:3,max:40',    
+  ]);  
+
+ }
+ $existe=$request->get('ano')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'ano'=> 'numeric|min:1960|max:2003',   
+  ]);   
+ }
+
+ $existe=$request->get('email')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'email' => 'required|email', 
+
+  ]);  
+
+ }
+ else{  
+
+   request()->validate(  
+    [   
+      'nome' => 'required|min:3,max:40',    
      // 'email' => 'required|email|arbitros:users,email', 
-  ]); 
+    ]); 
+ }
  Arbitro::find($id)->update($request->all());
  return redirect()->route('arbitro.index')
 
  ->with('success','Arbitro actualizado com sucesso'); 
 } 
+
 public function destroy(Request $request, $id)
 
 {

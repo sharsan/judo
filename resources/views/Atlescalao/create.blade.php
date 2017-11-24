@@ -4,7 +4,7 @@
 <div class="container"> 
  <link rel="stylesheet" href="{{asset('css/app.css')}}">
  <h2>Registrar escalão</h2><br>
- <a href="{{URL::to('att/create')}}" title=""><h4><- voltar</h4></a>
+ <a href="{{URL::to('atlesc')}}" title=""><h4>Escalões dos atletas</h4></a>
 
  @if ($errors->any())
  <div class="alert alert-danger">
@@ -29,14 +29,33 @@
   <div class="row">
     <div class="form-group col-md-8">  
 
-     <!-- Nome -->
-     <div class="col-md-3">
-      <label for="nome"> Nome :</label>
-      <input type="text" class="form-control" name="nome" placeholder="Ex: +110 "></input> 
-    </div>
-  </div>
+      <!-- Nome --> 
+      <div class="col-md-10"> <br> 
+        <label for="atleta">Nome :
+          <select id="atleta" name="atleta">
 
-  <!-- Outros detalhes --> 
+            @foreach($atleta as $atl)
+            <option value="{{$atl->nome}}">{{$atl->nome}} </option>
+            @endforeach
+          </select>
+        </label>    
+      </div> 
+
+      <!-- Escalao --> 
+
+      <div class="col-md-10"> <br> 
+        <label for="escalao">Escalão :
+          <select id="escalao" name="escalao">
+
+            @foreach($escalao as $esc)
+            <option value="{{$esc->nome}}">{{$esc->nome}} </option>
+            @endforeach
+          </select>
+        </label>    
+      </div>  
+    </div> 
+
+    <!-- Outros detalhes --> 
 <!-- 
          <div class="form-group col-md-12">
              <br> <label for="descricao" class="col-sm-2 col-form-label col-form-label-sm">Outros detalhes

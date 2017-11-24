@@ -27,7 +27,7 @@
   <h1><p class="text-center">Federação Moçambicana de Judo</p>  
 
     <div class="container">
-      <a href="{{URL::to('inicio')}}" title=""><h4>Inicio</h4></a>
+      <a href="{{URL::to('inicio')}}" title=""><h4>Início</h4></a>
     </h4>  
   </div>
 

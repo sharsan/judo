@@ -15,36 +15,25 @@ Route::resource('atlcat' , 'AtlCategoriaController'    );
 Route::resource('atlcinto'     , 'AtlCinturaoController');  
 Route::resource('atlclube'  , 'AtlClubeController'  );  
 Route::resource('atlesc'   , 'AtlEscalaoController');  
-Route::resource('atltreinador'   , 'AtlTreinadorController');  
-Route::resource('treinador', 'TreinadorController'    ); 
-
-Route::resource('atletapeso'    , 'AtletaPesoController'); 
-
-Route::resource('categoria' , 'CategoriaController'    );  
-
-Route::resource('cintocores'     , 'CinturaoController'  ); 
-
-Route::resource('clube'     , 'ClubeController'        ); 
-
-Route::resource('estado'    , 'EstadoController'       );
-
-Route::resource('et'        , 'EsttController'         ); 
-
-Route::resource('escalao'        , 'EscalaoController' ); 
-
+Route::resource('atltreinador'   , 'AtlTreinadorController');   
+Route::resource('atletapeso'    , 'AtletaPesoController');  
+Route::resource('categoria' , 'CategoriaController'    );   
+Route::resource('cintocores'     , 'CinturaoController'  );  
+Route::resource('clube'     , 'ClubeController'        );  
+Route::resource('estado'    , 'EstadoController'       ); 
+Route::resource('et'        , 'EsttController'         );  
+Route::resource('escalao'        , 'EscalaoController' );  
 Route::resource('finalista' , 'FinalistaController'    );  
 Route::resource('inicio'    , 'InicioController'       );  
 Route::resource('grupo'     , 'GrupoController'        ); 
 Route::resource('inscrito'  , 'InscritoController'     ); 
-Route::resource('mail'     , 'CaixaemailController'        ); 
-Route::resource('qlf'       , 'QualificacoesController'); 
-
-Route::resource('tatami12'    , 'Tatami12Controller'       ); 
-Route::resource('tatami34'    , 'Tatami34Controller'       ); 
-Route::resource('treinadorclube'  , 'TreinadorClubesController');
-Route::resource('standard'  , 'StandardController'     ); 
-
-
+Route::resource('mail'     , 'CaixaemailController'    ); 
+Route::resource('qlf'       , 'QualificacoesController');  
+Route::resource('tatami12'    , 'Tatami12Controller'   ); 
+Route::resource('tatami34'    , 'Tatami34Controller'   ); 
+Route::resource('treinador', 'TreinadorController'    ); 
+Route::resource('treinadorclube','TreinadorClubesController');
+Route::resource('standard'  , 'StandardController'     );  
 Route::resource('terceiro'  , 'TerceiroController'     );  
 Route::resource('torneio'   , 'TorneioController'      );  
 Route::resource('usuario'   , 'UsuarioController'      );   

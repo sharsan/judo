@@ -3,8 +3,8 @@
 <title>Adicionar escalao</title>
 <div class="container"> 
  <link rel="stylesheet" href="{{asset('css/app.css')}}">
- <h2>Registrar escalão</h2><br>
- <a href="{{URL::to('atleta/create')}}" title=""><h4><- voltar</h4></a>
+ <center><h2>Registrar escalão</h2></center><br>
+ <a href="{{URL::to('escalao')}}" title=""><h4>Escalões</h4></a>
 
  @if ($errors->any())
  <div class="alert alert-danger">
@@ -30,11 +30,11 @@
     <div class="form-group col-md-8">  
 
      <!-- Nome -->
-     <div class="col-md-3">
+     <div class="col-md-3"><br>
       <label for="nome"> Nome :</label>
       <input type="text" class="form-control" name="nome" placeholder="Ex: +110 "></input> 
-    </div>
-  </div>
+    </div>    
+  </div>    
 
   <!-- Outros detalhes --> 
 <!-- 
@@ -46,7 +46,7 @@
       </div>
 
       <div class="form-group col-md-4"> 
-        <button type="submit" class="btn btn-success" style="margin-left:38px">Adicionar escalao</button>  
+        <button type="submit" class="btn btn-success" style="margin-left:38px">Adicionar escalão</button>  
         <!-- -->
       </div>
     </form>

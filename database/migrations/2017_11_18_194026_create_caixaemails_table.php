@@ -10,7 +10,7 @@ class CreateCaixaemailsTable extends Migration
         Schema::create('caixaemails', function (Blueprint $table) {
             $table->increments('id');
             $table->double('user_name', 40); 
-            $table->string('sender_email', 2);
+            $table->string('sender_email',40);
             $table->double('subject', 40);
             $table->double('content', 150); 
             $table->double('recipient_name', 40);

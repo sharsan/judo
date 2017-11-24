@@ -4,8 +4,8 @@
 <link rel="stylesheet" href="{{asset('css/app.css')}}"> 
 <body>
   <div class="container">
-    <h2>Editar clube</h2><br>
-    <a href="{{URL::to('clube')}}" title=""><h4><- voltar</h4></a>
+    <h2>Editar clube do treinador</h2><br>
+    <a href="{{URL::to('treinadorclube')}}" title=""><h4>Treinadores - clubes</h4></a>
 
 
     @if ($errors->any())

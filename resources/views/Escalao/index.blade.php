@@ -3,22 +3,24 @@
 <title>Escalões </title>
 
 <div class="container"> 
-  <h3><center><th>Escalões</th></center> </h3>
+  <h3><center><th>Escalões</th></center> </h3><br>
 
-  <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+  <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <!-- Navbar content -->
+  </nav>
+
   
-  
-  <table class="table table-striped" id="myTable"> <br>
-    <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
-      <!-- Navbar content -->
-    </nav> 
+  <table class="table table-striped" id="myTable">  
+
+    <input class="form-control" type="text" placeholder="Pesquisar por Nome" onkeyup="filtrar()" id="txtPesk" style="margin-top: 20px; width: 410px; height: 35px">
+
     
     
     <div class="row">  <!--  este div inseri pra separa o Search com o restante -->
       <thead>    
 
-        <a href="{{URL::to('atleta/create')}}" title=""><h4><- voltar</h4></a>  
         <div class="form-group col-md-4"> <br>
+          <a href="{{URL::to('atlesc/create')}}" title=""><h4>Atribuir escalão a atleta</h4></a>  
           <a href="{{URL::to('escalao/create')}}" title=""><h4>Adicionar escalão</h4></a> 
         </div>
         
@@ -41,7 +43,7 @@
             
             <td><a href="{{action('EscalaoController@edit', $post['id'])}}" class="btn btn-warning">Editar</a></td>
             <td> 
-              
+
               <form action="{{action('EscalaoController@destroy', $post['id'])}}" method="post">
                 {{csrf_field()}}
                 <input name="_method" type="hidden" value="DELETE">

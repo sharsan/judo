@@ -5,7 +5,7 @@
 <body>
   <div class="container">
     <h2>Editar escalão</h2><br>
-    <a href="{{URL::to('escalao')}}" title=""><h4><- voltar</h4></a>
+    <a href="{{URL::to('escalao')}}" title=""><h4>Esclaões</h4></a>
 
 
     @if ($errors->any())

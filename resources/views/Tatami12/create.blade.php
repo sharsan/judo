@@ -93,7 +93,7 @@
           <option value="{{$grp->atleta1}}">{{$grp->atleta1}} </option>
           @endforeach
         </select>
-      </label>       <b>  VS  </b>
+      </label>      <h4> <b>  VS  </b> </h4>
 
       <!-- 2º lugar --> 
       <label for="atleta2"> Atleta 2:
@@ -107,28 +107,26 @@
   </div>  
   <!-- vencedor12 -->
   <div class="col-md-10"> <br> 
-    <label for="vencedor12"> Vencedor:
-     <select id="vencedor12" name="vencedor12">
+    <label for="vencedor12"> <h3>Vencedor:</h3></label>
+    <select id="vencedor12" name="vencedor12">
+
+      @foreach($inscrito as $insc)
+      <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
+      @endforeach
+    </select> 
+  </div> 
+  <!-- Vencido -->
+  <div class="col-md-10"> <br> 
+    <label for="vencido"> Vencido:
+     <select id="vencido" name="vencido">
 
       @foreach($inscrito as $insc)
       <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
       @endforeach
     </select> 
   </label>
-</div> 
-<!-- Vencido -->
-<div class="col-md-10"> <br> 
-  <label for="vencido"> Vencido:
-   <select id="vencido" name="vencido">
-
-    @foreach($inscrito as $insc)
-    <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
-    @endforeach
-  </select> 
-</label>
 </div>  
 </div> 
-
 
 
 <!-- Outros detalhes --> 
@@ -146,13 +144,15 @@
 </form>
 
 
-
+<div class="form-group col-md-6"> <br><br> 
+  <h3> Lutas concluídas do grupo A</h3>  
+</div> 
 
 <table class="table table-striped">    
 
  <thead>
   <tr>
-    <th>ID</th> 
+    {{-- <th>ID</th>  --}}
     <th>Torneio</th> 
     <th>Atleta 1</th>
     <th>Escalão</th> 
@@ -164,12 +164,12 @@
 
 @foreach($tatami12 as $post)
 <tr>
-  <td>{{$post['id']}}</td> 
+  {{-- <td>{{$post['id']}}</td>  --}}
   <td>{{$post['torneio']}}</td>
   <td>{{$post['atleta1']}}</td>
   <td>{{$post['escalao']}}</td>
   <td>{{$post['atleta2']}}</td>
-  <td>{{$post['juri']}}</td>
+  <td>{{$post['juri'   ]}}</td>
   <td>{{$post['vencedor12']}}</td>  
   @endforeach
 </table>
@@ -178,10 +178,10 @@
 <table class="table table-striped">  
   <thead>   
 
-   <h3> Competidores do grupo A</h3>  
+   <center><h3> Lutas do grupo A</h3>  </center>
    <thead>
     <tr>
-      <th>ID</th> 
+      {{-- <th>ID</th>  --}}
       <th>Torneio</th> 
       <th>Atleta 1</th>
       <th>Escalão</th> 
@@ -192,7 +192,7 @@
   <tbody>
     @foreach($grupo as $post)
     <tr>
-      <td>{{$post['id']}}</td> 
+      {{-- <td>{{$post['id']}}</td>  --}}
       <td>{{$post['torneio']}}</td>
       <td>{{$post['atleta1']}}</td>
       <td>{{$post['escalao']}}</td>

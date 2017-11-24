@@ -3,26 +3,37 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\AtlEscalao;  
 
+use App\Atleta;
+use App\Escalao; 
+
+
 class AtlEscalaoController extends Controller
 {
   public function index()
   {
-   $atlescalao = AtlEscalao::all()->toArray();
+   $atlescalao = AtlEscalao::all()->toArray(); 
 
-   return view('atlescalao.index', compact('atlescalao'));
+   $atleta = Atleta::all();  
+   $escalao = Escalao::all();  
+   return view('atlescalao.index', compact('atlescalao','atleta','escalao'));
  } 
  
  public function create()
  {
    $atlescalao = new AtlEscalao();
-   return view("atlescalao.create",compact('atlescalao')); 
+   
+   $atleta = Atleta::all();  
+   $escalao = Escalao::all();  
+   return view("atlescalao.create",compact('atlescalao','atleta','escalao')); 
  } 
  
  public function edit($id)
  {
    $atlescalao = AtlEscalao::find($id);
 
-   return view('atlescalao.edit', compact('atlescalao','id')); 
+   $atleta = Atleta::all();  
+   $escalao = Escalao::all();  
+   return view('atlescalao.edit', compact('atlescalao','id','atleta','escalao')); 
  } 
 
  public function update(Request $request, $id)

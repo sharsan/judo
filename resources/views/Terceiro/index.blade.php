@@ -7,7 +7,7 @@
  <a href="{{URL::to('grupo')}}" title=""><h4>Fase de grupos</h4></a>
  <a href="{{URL::to('qlf')}}" title=""><h4>Ver finalistas</h4></a>
 
- <center><h2>Lista para a disputa dos 3ºs lugares</h2> </center> <br>
+ <center><h2>Listas para a disputa dos 3ºs lugares</h2> </center> <br>
 
  <h3>Tatami 1</h3> <br>
  <table class="table table-striped">  
@@ -15,7 +15,7 @@
 
    <thead>
     <tr>
-      <th>ID</th> 
+      {{-- <th>ID</th>  --}}
       <th>Torneio</th> 
       <th>Atleta 1</th>
       <th>Escalão</th>  
@@ -25,7 +25,7 @@
   <tbody>
     @foreach($tatami12 as $post)
     <tr>
-      <td>{{$post['id']}}</td> 
+      {{-- <td>{{$post['id']}}</td>  --}}
       <td>{{$post['torneio']}}</td>
       <td>{{$post['vencido']}}</td>
       <td>{{$post['escalao']}}</td> 
@@ -41,7 +41,7 @@
 
      <thead>
       <tr>
-        <th>ID</th> 
+        {{-- <th>ID</th>  --}}
         <th>Torneio</th> 
         <th>Atleta 2</th>
         <th>Escalão</th>  
@@ -51,7 +51,7 @@
     <tbody>
       @foreach($tatami34 as $post)
       <tr>
-        <td>{{$post['id']}}</td> 
+        {{-- <td>{{$post['id']}}</td>  --}}
         <td>{{$post['torneio']}}</td>
         <td>{{$post['vencido']}}</td>
         <td>{{$post['escalao']}}</td> 
@@ -66,7 +66,7 @@
       </thead>
       <thead>
         <tr>
-          <th>ID</th> 
+          {{-- <th>ID</th>  --}}
           <th>Nome do campeonato</th> 
           <th>2º do grupo A</th> 
           <th>Escalão</th>
@@ -80,7 +80,7 @@
   <tbody>
     @foreach($terceiro as $post)
     <tr>
-      <td>{{$post['id']}}</td>
+      {{-- <td>{{$post['id']}}</td> --}}
       <td>{{$post['torneio']}}</td>
       <td>{{$post['vencido12']}}</td> 
       <td>{{$post['escalao']}}</td>

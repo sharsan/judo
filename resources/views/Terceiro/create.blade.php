@@ -29,7 +29,7 @@
 
    <thead>
     <tr>
-      <th>ID</th> 
+      {{-- <th>ID</th>  --}}
       <th>Torneio</th> 
       <th>Escalão</th>  
       <th>2º do grupo A</th> 
@@ -39,7 +39,7 @@
   
   @foreach($tatami12 as $post)
   <tr>
-    <td>{{$post['id']}}</td> 
+    {{-- <td>{{$post['id']}}</td>  --}}
     <td>{{$post['torneio']}}</td>
     <td>{{$post['escalao']}}</td> 
     <td>{{$post['vencido']}}</td>
@@ -52,7 +52,7 @@
 
     <thead>
       <tr>
-        <th>ID</th> 
+        {{-- <th>ID</th>  --}}
         <th>Torneio</th> 
         <th>Escalão</th>  
         <th>2º do grupo B</th> 
@@ -62,7 +62,7 @@
 
     @foreach($tatami34 as $post)
     <tr>
-      <td>{{$post['id']}}</td> 
+      {{-- <td>{{$post['id']}}</td>  --}}
       <td>{{$post['torneio']}}</td>
       <td>{{$post['escalao']}}</td> 
       <td>{{$post['vencido']}}</td>
@@ -143,22 +143,22 @@
       </div>  
 
       <!-- Vencedor -->
-      <div class="col-md-10"> 
-        <label for="terceiro"> Vencedor:
-         <select id="terceiro" name="terceiro">
+      <div class="col-md-10"> <br>
+       <label for="terceiro">  <h3>Vencedor:</h3></label> 
+       <select id="terceiro" name="terceiro">
 
-          @foreach($inscrito as $insc)
-          <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
-          @endforeach
-        </select> 
-      </label>
-    </div>  
+        @foreach($inscrito as $insc)
+        <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
+        @endforeach
+      </select> 
+    </label>
   </div>  
+</div>  
 
-  <!-- Outros detalhes --> 
+<!-- Outros detalhes --> 
 
-  <div class="form-group col-md-12">
-   <br> <label for="descricao" class="col-sm-2 col-form-label col-form-label-sm">Outros detalhes
+<div class="form-group col-md-12">
+  <label for="descricao" class="col-sm-4 col-form-label col-form-label-sm">Outros detalhes
 
     <br> <br><textarea name="descricao" rows="8" cols="80"></textarea> 
   </label>

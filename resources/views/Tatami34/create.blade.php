@@ -93,7 +93,7 @@
           <option value="{{$grp->atleta3}}">{{$grp->atleta3}} </option>
           @endforeach
         </select>
-      </label>       <b>  VS  </b>
+      </label>          <h4> <b>  VS  </b> </h4>
 
       <!-- 2º lugar --> 
       <label for="atleta4"> Atleta 2:
@@ -107,25 +107,24 @@
   </div>  
   <!-- vencedor34 -->
   <div class="col-md-10"> <br> 
-    <label for="vencedor34"> Vencedor:
-     <select id="vencedor34" name="vencedor34">
+    <label for="vencedor34"> <h3>Vencedor:</h3></label>
+    <select id="vencedor34" name="vencedor34">
+
+      @foreach($inscrito as $insc)
+      <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
+      @endforeach
+    </select> 
+  </div> 
+  <!-- Vencido -->
+  <div class="col-md-10"> <br> 
+    <label for="vencido"> Vencido:
+     <select id="vencido" name="vencido">
 
       @foreach($inscrito as $insc)
       <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
       @endforeach
     </select> 
   </label>
-</div> 
-<!-- Vencido -->
-<div class="col-md-10"> <br> 
-  <label for="vencido"> Vencido:
-   <select id="vencido" name="vencido">
-
-    @foreach($inscrito as $insc)
-    <option value="{{$insc->atleta}}">{{$insc->atleta}} </option>
-    @endforeach
-  </select> 
-</label>
 </div>  
 </div> 
 
@@ -143,63 +142,67 @@
 <div class="form-group col-md-4"> 
   <button type="submit" class="btn btn-success" style="margin-left:38px">Adicionar luta</button>  
 </div>
-</form>
 
+<div class="form-group col-md-6"> <br><br> 
+ <h3> Lutas concluídas do grupo B</h3>  
+</div> 
 
+</form> 
 
-
-<table class="table table-striped">    
+<table class="table table-striped">   
 
  <thead>
   <tr>
-    <th>ID</th> 
+    {{-- <th>ID</th>  --}}
     <th>Torneio</th> 
     <th>Atleta 1</th>
     <th>Escalão</th> 
     <th>Atleta 2</th> 
     <th>Júri</th>
+    <th>Sexo</th>  
     <th>Vencedor</th> 
   </tr>
 </thead>
 
 @foreach($tatami34 as $post)
 <tr>
-  <td>{{$post['id']}}</td> 
+  {{-- <td>{{$post['id']}}</td>  --}}
   <td>{{$post['torneio']}}</td>
   <td>{{$post['atleta3']}}</td>
   <td>{{$post['escalao']}}</td>
   <td>{{$post['atleta4']}}</td>
   <td>{{$post['juri']}}</td>
+  <td>{{$post['sexo']}}</td>
   <td>{{$post['vencedor34']}}</td>  
   @endforeach
 </table>
 
 
 <table class="table table-striped">  
+
   <thead>   
+   <center><h3> Lutas do grupo B </h3>  </center> 
 
-    <h3> Competidores do grupo B</h3>  
-    <thead>
-      <tr>
-        <th>ID</th> 
-        <th>Torneio</th> 
-        <th>Atleta 1</th>
-        <th>Escalão</th> 
-        <th>Atleta 2</th> 
-        <th>Sexo</th>  
-      </tr>
-    </thead>
-    <tbody>
-      @foreach($grupo as $post)
-      <tr>
-        <td>{{$post['id']}}</td> 
-        <td>{{$post['torneio']}}</td>
-        <td>{{$post['atleta3']}}</td>
-        <td>{{$post['escalao']}}</td>
-        <td>{{$post['atleta4']}}</td> 
-        <td>{{$post['sexo']}}</td>
-        @endforeach
-      </tbody> 
-    </table>
+   <tr>
+    {{-- <th>ID</th>  --}}
+    <th>Torneio</th> 
+    <th>Atleta 1</th>
+    <th>Escalão</th> 
+    <th>Atleta 2</th>  
+    <th>Sexo</th>  
+  </tr>
+</thead>
+<tbody>
+  @foreach($grupo as $post)
+  <tr>
+    {{-- <td>{{$post['id']}}</td>  --}}
+    <td>{{$post['torneio']}}</td>
+    <td>{{$post['atleta3']}}</td>
+    <td>{{$post['escalao']}}</td>
+    <td>{{$post['atleta4']}}</td>  
+    <td>{{$post['sexo']}}</td>
+    @endforeach
+  </tbody> 
+</table>
 
-    @endsection 
+@endsection 

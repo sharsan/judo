@@ -2,10 +2,7 @@
 @section('content')
 <title>Inscritos</title>
 <div class="container">
-  <h2><center><th>Lista de inscritos</th></center> </h2>
-
-
-
+  <h2><center><th>Lista de inscritos</th></center> </h2> 
   
   <table class="table table-striped" id="myTable"> 
     <br>
@@ -17,6 +14,7 @@
     
     <a href="{{URL::to('escalao')}}" title=""><h4>Escalões</h4></a>
     <a href="{{URL::to('grupo')}}" title=""><h4>Grupos</h4></a>
+    <a href="{{URL::to('atletapeso')}}" title=""><h4>Pesagem</h4></a>
     <a href="{{URL::to('torneio')}}" title=""><h4>Torneios</h4></a>
     <a href="{{URL::to('inscrito/create')}}" title=""><h4>Inscrever competidor</h4></a>
     <thead>

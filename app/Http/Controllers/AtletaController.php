@@ -35,28 +35,12 @@ class AtletaController extends Controller
 
  public function update(Request $request, $id)
  { 
-   request()->validate(  
-    [   
-      'nome' => 'required|unique:atletas|min:3,max:40',   
-     // 'email' => 'required|email|atletas:users,email',  
-    ]); 
-   Atleta::find($id)->update($request->all());
-   return redirect()->route('atleta.index')
 
-   ->with('success','Atleta actualizado com sucesso'); 
- }
-
-
-
- public function store(Request $request)
- {       
-   
   $existe=$request->get('apelido')!="";
 
   if($existe==true){
    $this->validate(request(), [
     'apelido' => 'min:3,max:40',    
-
   ]);  
 
  }
@@ -64,10 +48,50 @@ class AtletaController extends Controller
 
  if($existe==true){
    $this->validate(request(), [
-    'ano'=> 'numeric|min:1960|max:2014',  
+    'ano'=> 'numeric|min:1960|max:2014',   
+  ]);   
+ }
+
+ $existe=$request->get('email')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'email' => 'required|email', 
 
   ]);  
 
+ }
+ else{  
+
+   request()->validate(  
+    [   
+      'nome' => 'required|min:3,max:40',   
+     // 'email' => 'required|email|atletas:users,email',  
+    ]);
+ } 
+ Atleta::find($id)->update($request->all());
+ return redirect()->route('atleta.index')
+
+ ->with('success','Atleta actualizado com sucesso'); 
+}
+
+public function store(Request $request)
+{       
+
+  $existe=$request->get('apelido')!="";
+
+  if($existe==true){
+   $this->validate(request(), [
+    'apelido' => 'min:3,max:40',    
+  ]);  
+
+ }
+ $existe=$request->get('ano')!="";
+
+ if($existe==true){
+   $this->validate(request(), [
+    'ano'=> 'numeric|min:1960|max:2014',   
+  ]);   
  }
 
  $existe=$request->get('email')!="";
